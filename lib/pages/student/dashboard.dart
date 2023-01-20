@@ -1,3 +1,4 @@
+import 'package:Tutora/pages/student/quiz/quizHomepage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:Tutora/pages/ComingSoon.dart';
@@ -168,7 +169,7 @@ class _DashboardState extends State<Dashboard> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const TaskSub()));
+                              builder: (context) => const quizHomepage()));
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
