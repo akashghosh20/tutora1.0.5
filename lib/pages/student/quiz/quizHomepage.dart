@@ -54,10 +54,13 @@ class _quizHomepageState extends State<quizHomepage> {
     }
   }
 
-  void changeColor() {
-    setState(() {
-      isPressed = true;
-    });
+  void checkAnsAndUpdate(bool value) {
+    if (value == true) {
+      score++;
+      setState(() {
+        isPressed = true;
+      });
+    }
   }
 
   @override
@@ -91,14 +94,17 @@ class _quizHomepageState extends State<quizHomepage> {
                 height: 10,
               ),
               for (int i = 0; i < _questions.length; i++)
-                OptionWidget(
-                  option: _questions[index].options.keys.toList()[i],
-                  color: isPressed
-                      ? _questions[index].options.values.toList()[i] == true
-                          ? correct
-                          : incorrect
-                      : neutral,
-                  onTap: changeColor,
+                GestureDetector(
+                  onTap: (() => checkAnsAndUpdate(
+                      _questions[index].options.values.toList()[i])),
+                  child: OptionWidget(
+                    option: _questions[index].options.keys.toList()[i],
+                    color: isPressed
+                        ? _questions[index].options.values.toList()[i] == true
+                            ? correct
+                            : incorrect
+                        : neutral,
+                  ),
                 )
             ],
           ),
