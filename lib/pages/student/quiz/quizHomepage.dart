@@ -54,8 +54,10 @@ class _quizHomepageState extends State<quizHomepage> {
     }
   }
 
-  void checkAnsAndUpdate(bool value) {
-    if (value == true) {
+  void checkAnsandUpdate(bool value) {
+    if (isPressed) {
+      return;
+    } else {
       score++;
       setState(() {
         isPressed = true;
@@ -95,8 +97,8 @@ class _quizHomepageState extends State<quizHomepage> {
               ),
               for (int i = 0; i < _questions.length; i++)
                 GestureDetector(
-                  onTap: (() => checkAnsAndUpdate(
-                      _questions[index].options.values.toList()[i])),
+                  onTap: () => checkAnsandUpdate(
+                      _questions[index].options.values.toList()[i]),
                   child: OptionWidget(
                     option: _questions[index].options.keys.toList()[i],
                     color: isPressed
