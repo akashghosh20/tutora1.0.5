@@ -38,7 +38,7 @@ class ResultBox extends StatelessWidget {
                   Get.to(Usermain());
                 },
                 child: const Text(
-                  "Submit",
+                  "Dashboard",
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
