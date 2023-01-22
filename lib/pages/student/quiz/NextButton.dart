@@ -1,5 +1,6 @@
 import 'package:Tutora/pages/student/quiz/constants.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -13,18 +14,20 @@ class NextButton extends StatelessWidget {
     return GestureDetector(
       onTap: nextQuestion,
       child: Container(
-        color: neutral,
-        width: double.infinity,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            "Next Button",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 24,
-            ),
-          ),
+        decoration: const BoxDecoration(
+          color: Color.fromARGB(255, 255, 0, 0),
+          borderRadius: BorderRadius.all(Radius.circular(18)),
         ),
+        child: TextButton(
+            style: TextButton.styleFrom(fixedSize: const Size(180, 50)),
+            onPressed: nextQuestion,
+            child: const Text(
+              "Next Question",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            )),
       ),
     );
   }

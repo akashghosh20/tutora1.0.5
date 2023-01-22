@@ -114,6 +114,14 @@ class UserSharedPreference {
     return sharedPreferences!.getString("Score");
   }
 
+  Future setQuizScore(String quizScore) async {
+    return await sharedPreferences!.setString("quizscore", quizScore);
+  }
+
+  getQuizScore() {
+    return sharedPreferences!.getString("quizscore");
+  }
+
   //.........................................................................................................................................................................................................Teacher Local Database Business Function..................................................
 
   Future setTeacherUserName(String teachername) async {
