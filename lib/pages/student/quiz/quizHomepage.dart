@@ -96,13 +96,8 @@ class _quizHomepageState extends State<quizHomepage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 255, 0, 0),
-        actions: [
-          Text(
-            "Score:$score",
-            style: TextStyle(fontSize: 18),
-          )
-        ],
         title: Text("Quiz App"),
+        centerTitle: true,
       ),
       body: Container(
         width: double.infinity,
