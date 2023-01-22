@@ -1,3 +1,4 @@
+import 'package:Tutora/pages/student/quiz/quizClass.dart';
 import 'package:Tutora/pages/student/quiz/quizHomepage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -169,7 +170,7 @@ class _DashboardState extends State<Dashboard> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const quizHomepage()));
+                              builder: (context) => const quizClass()));
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -183,7 +184,7 @@ class _DashboardState extends State<Dashboard> {
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("প্রতিদিনের কাজ")
+                        const Text("Exam")
                       ],
                     ),
                   ),
