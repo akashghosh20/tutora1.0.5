@@ -207,7 +207,7 @@ class _DashboardState extends State<Dashboard> {
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("আমাদের টিউটরেরা")
+                        const Text("টিউটরেরা")
                       ],
                     ),
                   ),

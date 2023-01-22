@@ -33,6 +33,7 @@ class _quizHomepageState extends State<quizHomepage> {
   int index = 0;
   int score = 0;
   bool isPressed = false;
+  bool isAlreadyClicked = false;
 
   void nextQuestion() {
     if (index == _questions.length - 1) {
@@ -55,10 +56,13 @@ class _quizHomepageState extends State<quizHomepage> {
   }
 
   void checkAnsandUpdate(bool value) {
-    if (isPressed) {
+    if (isAlreadyClicked) {
       return;
     } else {
-      score++;
+      if (value == true) {
+        score++;
+        isAlreadyClicked == true;
+      }
       setState(() {
         isPressed = true;
       });
@@ -95,7 +99,7 @@ class _quizHomepageState extends State<quizHomepage> {
               SizedBox(
                 height: 10,
               ),
-              for (int i = 0; i < _questions.length; i++)
+              for (int i = 0; i < _questions[index].options.length; i++)
                 GestureDetector(
                   onTap: () => checkAnsandUpdate(
                       _questions[index].options.values.toList()[i]),
