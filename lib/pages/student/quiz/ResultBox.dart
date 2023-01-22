@@ -34,7 +34,9 @@ class ResultBox extends StatelessWidget {
             ),
             child: TextButton(
                 style: TextButton.styleFrom(fixedSize: const Size(180, 50)),
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(Usermain());
+                },
                 child: const Text(
                   "Submit",
                   style: TextStyle(
