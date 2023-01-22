@@ -21,32 +21,39 @@ class quizHomepage extends StatefulWidget {
 
 class _quizHomepageState extends State<quizHomepage> {
   List<Question> _questions = [
+    Question(id: '1', title: "Who is the CEO of Tutora?", options: {
+      "Akash Ghosh": false,
+      "Rana": false,
+      "Kiddo": false,
+      "Azizul Alam Prottoy": true
+    }),
+    Question(id: '2', title: "Who is the CTO of Tutora", options: {
+      "Akash Ghosh": true,
+      "Rana": false,
+      "Shahab Vai": false,
+      "Azizul Alam Prottoy": false
+    }),
+    Question(id: '3', title: "Who is the QA ENgineer of Tutora", options: {
+      "Kiddo": false,
+      "Lian Vai": false,
+      "Rana": true,
+      "Sonapakhi": false
+    }),
+    Question(id: '3', title: "Who is the Marketting Officer", options: {
+      "Lian Vai": false,
+      "Azizul Alam Prottoy": false,
+      "Shahab Vai": true,
+      "Kiddo": false
+    }),
     Question(
-        id: '1',
-        title:
-            "What is the order of thgahjgfajgfhagdfh gafhfgdsahghja ahsfgahhjfhj ahdfsjhskjgfh ahfdjh",
+        id: '3',
+        title: "Who is the Graphics Designer of Tutora",
         options: {
-          "aaskfghhusdgfhgdhfghasgdhfgahjgfhg": false,
-          "6": false,
-          "7": false,
-          "1": true
+          "Lian Vai": true,
+          "Rana": false,
+          "Akash": false,
+          "Rana": false
         }),
-    Question(
-        id: '2',
-        title: "What is the order",
-        options: {"2": true, "6": false, "7": false, "1": false}),
-    Question(
-        id: '3',
-        title: "What is the order",
-        options: {"10": false, "2": false, "3": true, "1": false}),
-    Question(
-        id: '3',
-        title: "What is the order",
-        options: {"50": false, "2": false, "3": true, "1": false}),
-    Question(
-        id: '3',
-        title: "What is the order",
-        options: {"50": false, "2": false, "3": true, "1": false}),
   ];
   int index = 0;
   int score = 0;
@@ -128,7 +135,7 @@ class _quizHomepageState extends State<quizHomepage> {
                     color: isPressed
                         ? _questions[index].options.values.toList()[i] == true
                             ? correct
-                            : incorrect
+                            : correct
                         : neutral,
                   ),
                 ),
