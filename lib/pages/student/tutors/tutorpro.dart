@@ -72,7 +72,7 @@ class _TutorProState extends State<TutorPro> {
                             Container(
                               color: const Color.fromARGB(255, 255, 233, 233),
                               alignment: Alignment.center,
-                              height: 180,
+                              height: 200,
                               margin: const EdgeInsets.all(10.0),
                               width: double.infinity,
                               child: Row(
@@ -90,7 +90,7 @@ class _TutorProState extends State<TutorPro> {
                                     Expanded(
                                       child: Container(
                                           margin: const EdgeInsets.all(10.0),
-                                          // height: 250,
+                                          height: 250,
                                           decoration: const BoxDecoration(
                                               color: Color.fromARGB(
                                                   255, 255, 233, 233)),

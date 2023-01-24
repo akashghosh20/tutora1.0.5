@@ -72,7 +72,7 @@ class _CourseState extends State<Course> {
                             Container(
                               color: const Color.fromARGB(255, 255, 233, 233),
                               alignment: Alignment.center,
-                              height: 170,
+                              height: 210,
                               margin: const EdgeInsets.all(10.0),
                               width: double.infinity,
                               child: Row(
@@ -90,7 +90,7 @@ class _CourseState extends State<Course> {
                                     Expanded(
                                       child: Container(
                                           margin: const EdgeInsets.all(10.0),
-                                          height: 150,
+                                          height: 200,
                                           decoration: const BoxDecoration(
                                               color: Color.fromARGB(
                                                   255, 255, 233, 233)),
