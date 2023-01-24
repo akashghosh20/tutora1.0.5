@@ -1,3 +1,4 @@
+import 'package:Tutora/pages/student/Review/Review.dart';
 import 'package:Tutora/pages/student/quiz/quizClass.dart';
 import 'package:Tutora/pages/student/quiz/quizHomepage.dart';
 import 'package:flutter/material.dart';
@@ -310,7 +311,7 @@ class _DashboardState extends State<Dashboard> {
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(const ComingSoon());
+                      Get.to(ReviewOne());
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -324,7 +325,7 @@ class _DashboardState extends State<Dashboard> {
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("সেটিংস")
+                        const Text("রিভিউ")
                       ],
                     ),
                   ),

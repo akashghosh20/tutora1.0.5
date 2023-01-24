@@ -2,14 +2,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:custom_rating_bar/custom_rating_bar.dart';
 
-class Review extends StatefulWidget {
-  Review({Key? key}) : super(key: key);
+class TutorReview extends StatefulWidget {
+  TutorReview({Key? key}) : super(key: key);
 
   @override
-  _ReviewState createState() => _ReviewState();
+  _TutorReviewState createState() => _TutorReviewState();
 }
 
-class _ReviewState extends State<Review> {
+class _TutorReviewState extends State<TutorReview> {
   final _formKey = GlobalKey<FormState>();
 
   var cname = "";
@@ -42,7 +42,7 @@ class _ReviewState extends State<Review> {
 
   // Adding Student
   CollectionReference students =
-      FirebaseFirestore.instance.collection('coachingreview');
+      FirebaseFirestore.instance.collection('tutorreview');
 
   Future<void> addUser() {
     return students
@@ -60,7 +60,7 @@ class _ReviewState extends State<Review> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("কোচিং রিভিউ পেজ"),
+        title: Text("টিউটর রিভিউ পেজ"),
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 255, 0, 0),
       ),
@@ -75,7 +75,7 @@ class _ReviewState extends State<Review> {
               ),
               Center(
                   child: Text(
-                "কোচিং রিভিউ",
+                "টিউটর রিভিউ",
                 style: TextStyle(fontSize: 20),
               )),
               SizedBox(
@@ -101,7 +101,7 @@ class _ReviewState extends State<Review> {
                 child: TextFormField(
                   autofocus: false,
                   decoration: const InputDecoration(
-                    labelText: 'কোচিং এর নাম ',
+                    labelText: 'টিউটরের নাম ',
                     labelStyle: TextStyle(fontSize: 15.0),
                     border: OutlineInputBorder(),
                     errorStyle:
@@ -110,7 +110,7 @@ class _ReviewState extends State<Review> {
                   controller: cnameController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Coaching Name';
+                      return 'Please Enter Tutor Name';
                     }
                     return null;
                   },
@@ -121,7 +121,7 @@ class _ReviewState extends State<Review> {
                 child: TextFormField(
                   autofocus: false,
                   decoration: const InputDecoration(
-                    labelText: 'মন্তব্য: ',
+                    labelText: 'মন্তব্য ',
                     labelStyle: TextStyle(fontSize: 20.0),
                     border: OutlineInputBorder(),
                     errorStyle:
@@ -141,7 +141,7 @@ class _ReviewState extends State<Review> {
                 child: TextFormField(
                   autofocus: false,
                   decoration: const InputDecoration(
-                    labelText: 'রেটিং (Stars): ',
+                    labelText: 'রেটিং(stars) ',
                     labelStyle: TextStyle(fontSize: 20.0),
                     border: OutlineInputBorder(),
                     errorStyle:
@@ -161,7 +161,7 @@ class _ReviewState extends State<Review> {
                 child: TextFormField(
                   autofocus: false,
                   decoration: const InputDecoration(
-                    labelText: 'তোমার নামঃ ',
+                    labelText: 'তোমার নাম',
                     labelStyle: TextStyle(fontSize: 20.0),
                     border: OutlineInputBorder(),
                     errorStyle:

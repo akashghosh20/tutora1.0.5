@@ -71,7 +71,7 @@ class _ChochProState extends State<ChochPro> {
                             Container(
                               color: const Color.fromARGB(255, 255, 233, 233),
                               alignment: Alignment.center,
-                              height: 180,
+                              height: 200,
                               margin: const EdgeInsets.all(10.0),
                               width: double.infinity,
                               child: Row(
@@ -80,11 +80,9 @@ class _ChochProState extends State<ChochPro> {
                                   children: [
                                     Expanded(
                                       child: Image.asset(
-                                        "assets/images/ci.png",
+                                        "assets/images/coaching.png",
                                         width: double.infinity,
                                         height: double.infinity,
-                                        color: const Color.fromARGB(
-                                            255, 255, 0, 0),
                                       ),
                                       flex: 1,
                                     ),

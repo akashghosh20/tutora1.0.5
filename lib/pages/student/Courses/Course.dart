@@ -116,16 +116,18 @@ class _CourseState extends State<Course> {
                                               ),
                                               Row(
                                                 children: [
-                                                  Text(
-                                                    storedocs[i]
-                                                        ['course description'],
-                                                    style: const TextStyle(
-                                                      fontSize: 17,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: Text(
+                                                      storedocs[i][
+                                                          'course description'],
+                                                      style: const TextStyle(
+                                                        fontSize: 17,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
