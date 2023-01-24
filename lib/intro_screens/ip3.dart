@@ -17,7 +17,7 @@ class IntroPage3 extends StatelessWidget {
             "assets/images/teacher.gif",
             height: 400,
           ),
-          const Text("নির্ভরশীলতা ও আস্থাভাজন",
+          const Text("শিক্ষকের প্রতি নির্ভরতাশীলতা",
               style: TextStyle(
                   fontSize: 25,
                   color: Color.fromARGB(255, 255, 0, 0),
@@ -26,7 +26,7 @@ class IntroPage3 extends StatelessWidget {
             height: 10,
           ),
           const Text(
-              "শিক্ষার্থীর জীবনে বাবামা এর পরেই যার প্রভাব সব থেকে বেশি সে হল শিক্ষক, তাই আস্থাভাজন শিক্ষক শিক্ষিকাদের পরিবার নিয়ে আমরা এখানে ",
+              "শিক্ষার্থীর জীবনে বাবা-মা এর পরেই যার প্রভাব সব থেকে বেশি তিনি হলেন শিক্ষক, তাই আস্থাভাজন শিক্ষক শিক্ষিকাদের পরিবার নিয়ে আমরা এখানে ।",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,

@@ -166,7 +166,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       child: const Center(
                         child: Text(
-                          'সাইন ইন',
+                          'রেজিস্টার',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

@@ -19,7 +19,7 @@ class IntroPage1 extends StatelessWidget {
             height: 400,
             width: .9 * width,
           ),
-          const Text("যোগাযোগের সুব্যবস্থা",
+          const Text("সুদৃঢ় সম্পর্ক স্থাপন",
               style: TextStyle(
                   fontSize: 25,
                   color: Color.fromARGB(255, 255, 0, 0),
@@ -28,7 +28,7 @@ class IntroPage1 extends StatelessWidget {
             height: 10,
           ),
           const Text(
-              "টিউটর এবং শিক্ষার্থীদের মধ্যকার যে যোগাযোগ ব্যবস্থা, তা সহজ করার জন্যেই আমাদের এই প্রয়াস",
+              "শিক্ষক এবং শিক্ষার্থীদের মধ্যে সবসময় যেন একটা ব্যবধান থেকেই যায়। শিক্ষক এবং শিক্ষার্থীর মধ্যকার সম্পর্ক সুদৃঢ় করার জন্যই আমাদের এই প্রয়াস।",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,

@@ -71,7 +71,7 @@ class _ChochProState extends State<ChochPro> {
                             Container(
                               color: const Color.fromARGB(255, 255, 233, 233),
                               alignment: Alignment.center,
-                              height: 150,
+                              height: 180,
                               margin: const EdgeInsets.all(10.0),
                               width: double.infinity,
                               child: Row(
