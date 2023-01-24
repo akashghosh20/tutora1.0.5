@@ -287,7 +287,7 @@ class _DashboardState extends State<Dashboard> {
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(Review());
+                      // Get.to(Review());
                       // Get.to(MyApp());
                     },
                     child: Column(
