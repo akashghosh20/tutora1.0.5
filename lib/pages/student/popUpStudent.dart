@@ -32,7 +32,7 @@ class _PopUpStudentState extends State<PopUpStudent> {
                 content: Column(
                   children: [
                     Text(
-                      "প্রথমে নিজের প্রফাইল পুরন করুন , অন্যথায় আপনি অ্যাপের সব ফাংশন উপভোগ করতে পারবেন না",
+                      "প্রথমে নিজের প্রোফাইল পুরন করুন , অন্যথায় আপনি অ্যাপের সব ফিচার উপভোগ করতে পারবেন না",
                       style: TextStyle(fontSize: 22),
                     ),
                     SizedBox(
