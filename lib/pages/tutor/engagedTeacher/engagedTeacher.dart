@@ -169,7 +169,7 @@ class _EnagedTeacherState extends State<EnagedTeacher> {
                 AnimatedTextKit(
                   animatedTexts: [
                     TypewriterAnimatedText(
-                      'Fill the red boxes only and tap on the Engage button',
+                      'Scroll down and tap on Engage button',
                       textStyle: const TextStyle(
                         color: Color.fromARGB(255, 255, 0, 0),
                         fontSize: 15,
@@ -192,7 +192,6 @@ class _EnagedTeacherState extends State<EnagedTeacher> {
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
-                      border: Border.all(color: Color.fromARGB(255, 255, 0, 0)),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
