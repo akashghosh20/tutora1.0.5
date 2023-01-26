@@ -319,9 +319,15 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                                                         const Size(
                                                                             100,
                                                                             15)),
-                                                            onPressed: () {
+                                                            onPressed:
+                                                                () async {
                                                               {
-                                                                Get.to(
+                                                                await UserSharedPreference()
+                                                                    .setTutionId(
+                                                                        storedocs[i]
+                                                                            [
+                                                                            'id']);
+                                                                await Get.to(
                                                                     EnagedTeacher());
                                                               }
                                                             },

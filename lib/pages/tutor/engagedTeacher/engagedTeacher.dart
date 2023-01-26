@@ -44,7 +44,7 @@ class _EnagedTeacherState extends State<EnagedTeacher> {
 
   @override
   void initState() {
-    tutionId = UserSharedPreference().getTutionId();
+    _tutionIdController.text = UserSharedPreference().getTutionId();
     name = UserSharedPreference().getTeacherName() ??
         "Complete your profile first";
     email = UserSharedPreference().getTeacherEmail() ??
