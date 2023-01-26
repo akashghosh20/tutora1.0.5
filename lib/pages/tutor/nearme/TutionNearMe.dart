@@ -1,3 +1,4 @@
+import 'package:Tutora/pages/localdata.dart';
 import 'package:Tutora/pages/tutor/engagedTeacher/engagedTeacher.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -18,6 +19,12 @@ class TutionNearMe extends StatefulWidget {
 class _TutionNearMeState extends State<TutionNearMe> {
   final Stream<QuerySnapshot> studentsStream =
       FirebaseFirestore.instance.collection('studentsteacherreq').snapshots();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
@@ -71,7 +78,7 @@ class _TutionNearMeState extends State<TutionNearMe> {
                             Container(
                               color: const Color.fromARGB(255, 255, 233, 233),
                               alignment: Alignment.center,
-                              height: 230,
+                              height: 250,
                               margin: const EdgeInsets.all(10.0),
                               width: double.infinity,
                               child: Row(
@@ -89,7 +96,7 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                     Expanded(
                                       child: Container(
                                           margin: const EdgeInsets.all(10.0),
-                                          height: 200,
+                                          height: 230,
                                           decoration: const BoxDecoration(
                                               color: Color.fromARGB(
                                                   255, 255, 233, 233)),
@@ -238,15 +245,17 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                                       fontFamily: 'Raleway',
                                                     ),
                                                   ),
-                                                  Text(
-                                                    "1",
-                                                    style: TextStyle(
-                                                      fontSize: 17,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: SelectableText(
+                                                      storedocs[i]['id'],
+                                                      style: TextStyle(
+                                                        fontSize: 17,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
                                                   ),
                                                 ],

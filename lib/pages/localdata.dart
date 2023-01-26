@@ -292,4 +292,12 @@ class UserSharedPreference {
   getTutoraFeedback() {
     return sharedPreferences!.getString("tutoraFeedback");
   }
+
+  Future setTutionId(String tutionid) async {
+    return await sharedPreferences!.setString("tutionId", tutionid);
+  }
+
+  getTutionId() {
+    return sharedPreferences!.getString("tutionId");
+  }
 }
