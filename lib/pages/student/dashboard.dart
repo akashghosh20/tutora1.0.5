@@ -1,6 +1,8 @@
 import 'package:Tutora/pages/student/Review/Review.dart';
+import 'package:Tutora/pages/student/query/query.dart';
 import 'package:Tutora/pages/student/quiz/quizClass.dart';
 import 'package:Tutora/pages/student/quiz/quizHomepage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:Tutora/pages/ComingSoon.dart';
@@ -287,7 +289,7 @@ class _DashboardState extends State<Dashboard> {
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                     onTap: () {
-                      // Get.to(Review());
+                      Get.to(QueryStudent());
                       // Get.to(MyApp());
                     },
                     child: Column(
