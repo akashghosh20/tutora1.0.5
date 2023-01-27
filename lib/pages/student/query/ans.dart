@@ -70,110 +70,135 @@ class _ansQueryState extends State<ansQuery> {
                       child: Column(
                         children: [
                           for (var i = 0; i < storedocs.length; i++) ...[
-                            Container(
-                              color: const Color.fromARGB(255, 255, 233, 233),
-                              alignment: Alignment.center,
-                              height: 250,
-                              margin: const EdgeInsets.all(10.0),
-                              width: double.infinity,
-                              child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Image.asset(
-                                        "assets/images/tutorsdp.png",
-                                        width: double.infinity,
-                                        height: double.infinity,
-                                      ),
-                                      flex: 1,
-                                    ),
-                                    Expanded(
-                                      child: Container(
-                                          margin: const EdgeInsets.all(10.0),
-                                          height: 250,
-                                          decoration: const BoxDecoration(
-                                              color: Color.fromARGB(
-                                                  255, 255, 233, 233)),
-                                          child: Column(
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Flexible(
-                                                    child: Text(
-                                                      'নামঃ ${storedocs[i]['name']}',
-                                                      style: const TextStyle(
-                                                        decoration:
-                                                            TextDecoration.none,
-                                                        fontSize: 18,
-                                                        color: Color.fromARGB(
-                                                            255, 255, 0, 0),
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontFamily: 'Raleway',
-                                                      ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Card(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    color: const Color.fromARGB(
+                                        255, 255, 233, 233),
+                                    alignment: Alignment.center,
+                                    // height: 250,
+                                    margin: const EdgeInsets.all(10.0),
+                                    width: double.infinity,
+                                    child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Expanded(
+                                            child: Container(
+                                                margin:
+                                                    const EdgeInsets.all(10.0),
+                                                // height: 250,
+                                                decoration: const BoxDecoration(
+                                                    color: Color.fromARGB(
+                                                        255, 255, 233, 233)),
+                                                child: Column(
+                                                  children: [
+                                                    Row(
+                                                      children: [
+                                                        Flexible(
+                                                          child: Text(
+                                                            'নামঃ ${storedocs[i]['name']}',
+                                                            style:
+                                                                const TextStyle(
+                                                              decoration:
+                                                                  TextDecoration
+                                                                      .none,
+                                                              fontSize: 18,
+                                                              color: Color
+                                                                  .fromARGB(
+                                                                      255,
+                                                                      255,
+                                                                      0,
+                                                                      0),
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              fontFamily:
+                                                                  'Raleway',
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
                                                     ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Flexible(
-                                                    child: Text(
-                                                      'প্রশ্নঃ ${storedocs[i]['question']}',
-                                                      style: const TextStyle(
-                                                        decoration:
-                                                            TextDecoration.none,
-                                                        fontSize: 16,
-                                                        color: Color.fromARGB(
-                                                            255, 0, 0, 0),
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontFamily: 'Raleway',
-                                                      ),
+                                                    Row(
+                                                      children: [
+                                                        Flexible(
+                                                          child: Text(
+                                                            'প্রশ্নঃ ${storedocs[i]['question']}',
+                                                            style:
+                                                                const TextStyle(
+                                                              decoration:
+                                                                  TextDecoration
+                                                                      .none,
+                                                              fontSize: 16,
+                                                              color: Color
+                                                                  .fromARGB(255,
+                                                                      0, 0, 0),
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              fontFamily:
+                                                                  'Raleway',
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
                                                     ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Row(
-                                                children: [
-                                                  const Flexible(
-                                                    child: Text(
-                                                      'উত্তরঃ  ',
-                                                      style: TextStyle(
-                                                        decoration:
-                                                            TextDecoration.none,
-                                                        fontSize: 16,
-                                                        color: Color.fromARGB(
-                                                            255, 0, 0, 0),
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontFamily: 'Raleway',
-                                                      ),
+                                                    Row(
+                                                      children: [
+                                                        Text(
+                                                          'উত্তরঃ  ',
+                                                          style: TextStyle(
+                                                            decoration:
+                                                                TextDecoration
+                                                                    .none,
+                                                            fontSize: 16,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    0,
+                                                                    0,
+                                                                    0),
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            fontFamily:
+                                                                'Raleway',
+                                                          ),
+                                                        ),
+                                                        Flexible(
+                                                          child: Text(
+                                                            storedocs[i]['ans'],
+                                                            style:
+                                                                const TextStyle(
+                                                              decoration:
+                                                                  TextDecoration
+                                                                      .none,
+                                                              fontSize: 16,
+                                                              color: Color
+                                                                  .fromARGB(255,
+                                                                      0, 0, 0),
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .normal,
+                                                              fontFamily:
+                                                                  'Raleway',
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
                                                     ),
-                                                  ),
-                                                  Flexible(
-                                                    child: Text(
-                                                      storedocs[i]['ans'],
-                                                      style: const TextStyle(
-                                                        decoration:
-                                                            TextDecoration.none,
-                                                        fontSize: 16,
-                                                        color: Color.fromARGB(
-                                                            255, 0, 0, 0),
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                        fontFamily: 'Raleway',
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ],
-                                          )),
-                                      flex: 2,
-                                    ),
-                                  ]),
+                                                  ],
+                                                )),
+                                            // flex: 10,
+                                          ),
+                                        ]),
+                                  ),
+                                ),
+                              ),
                             ),
                           ]
                         ],
