@@ -154,12 +154,12 @@ class _EnagedTeacherState extends State<EnagedTeacher> {
               children: [
 // hello world
                 Image.asset(
-                  "assets/inimages/LOGO.png",
+                  "assets/inimages/logob.png",
                   width: 300,
                   height: 300,
                 ),
                 Text(
-                  'Engagement of a tution ',
+                  'টিউশন বুকিং ফর্ম ',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
@@ -169,7 +169,7 @@ class _EnagedTeacherState extends State<EnagedTeacher> {
                 AnimatedTextKit(
                   animatedTexts: [
                     TypewriterAnimatedText(
-                      'Scroll down and tap on Engage button',
+                      'নিচে যান এবং জমা দিন বাটনটিতে ক্লিক করুন',
                       textStyle: const TextStyle(
                         color: Color.fromARGB(255, 255, 0, 0),
                         fontSize: 15,
@@ -448,7 +448,7 @@ class _EnagedTeacherState extends State<EnagedTeacher> {
                       ),
                       child: Center(
                         child: Text(
-                          'Engage',
+                          'জমা দিন',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
