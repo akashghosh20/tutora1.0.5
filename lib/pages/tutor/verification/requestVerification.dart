@@ -27,7 +27,7 @@ class _RequestVerificationState extends State<RequestVerification> {
                 height: 10,
               ),
               const Text(
-                "আপনার প্রথমে ১০০০ টাকা দিয়ে ভেরিফিকেসন রিকুয়েস্ট করতে হবে",
+                "আপনার প্রথমে ১৫০০ টাকা দিয়ে ভেরিফিকেসন রিকুয়েস্ট করতে হবে",
                 style: TextStyle(fontSize: 20),
               ),
               const SizedBox(

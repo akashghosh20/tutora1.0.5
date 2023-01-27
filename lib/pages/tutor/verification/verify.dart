@@ -146,8 +146,8 @@ class _VerifyState extends State<Verify> {
     String transactionId,
   ) async {
     await FirebaseFirestore.instance.collection('verification').add({
-      'name': name,
-      'email': email,
+      'name': email,
+      'email': name,
       'phone': phone,
       'gender': gender,
       'religion': religion,

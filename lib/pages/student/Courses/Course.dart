@@ -49,6 +49,7 @@ class _CourseState extends State<Course> {
                         'All Courses',
                         textAlign: TextAlign.center,
                         style: TextStyle(
+                          decoration: TextDecoration.none,
                           fontSize: 25,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -103,6 +104,8 @@ class _CourseState extends State<Course> {
                                                       storedocs[i]
                                                           ['course name'],
                                                       style: const TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
                                                         fontSize: 22,
                                                         color: Color.fromARGB(
                                                             255, 255, 0, 0),
@@ -121,6 +124,8 @@ class _CourseState extends State<Course> {
                                                       storedocs[i][
                                                           'course description'],
                                                       style: const TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
                                                         fontSize: 17,
                                                         color: Color.fromARGB(
                                                             255, 0, 0, 0),
@@ -138,6 +143,8 @@ class _CourseState extends State<Course> {
                                                     child: Text(
                                                       'Course Instructors :  ',
                                                       style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
                                                         fontSize: 17,
                                                         color: Color.fromARGB(
                                                             255, 0, 0, 0),
@@ -152,6 +159,8 @@ class _CourseState extends State<Course> {
                                                       storedocs[i][
                                                           'course instructors'],
                                                       style: const TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
                                                         fontSize: 17,
                                                         color: Color.fromARGB(
                                                             255, 0, 0, 0),
@@ -183,6 +192,8 @@ class _CourseState extends State<Course> {
                                                     child: const Text(
                                                       'Details',
                                                       style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
                                                         fontSize: 18,
                                                         color: Color.fromARGB(
                                                             255, 255, 0, 0),

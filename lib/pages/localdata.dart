@@ -251,6 +251,32 @@ class UserSharedPreference {
     return sharedPreferences!.getString("TeachingAreas");
   }
 
+  Future setTeacherteachingyear(String teachingyear) async {
+    return await sharedPreferences!.setString("Teaching year", teachingyear);
+  }
+
+  getTeacherteachingyear() {
+    return sharedPreferences!.getString("Teaching year");
+  }
+
+  Future setTeachertpressentadress(String tpressentadress) async {
+    return await sharedPreferences!
+        .setString("tpressentadress", tpressentadress);
+  }
+
+  getTeachertpressentadress() {
+    return sharedPreferences!.getString("tpressentadress");
+  }
+
+  Future setTeachertparmanentadresss(String tparmanentadress) async {
+    return await sharedPreferences!
+        .setString("tparmanentadress", tparmanentadress);
+  }
+
+  getTeachertparmanentadress() {
+    return sharedPreferences!.getString("tparmanentadress");
+  }
+
   Future setTeacherCity(String teacherCity) async {
     return await sharedPreferences!.setString("TeacherCity", teacherCity);
   }

@@ -42,31 +42,6 @@ class _DashboardState extends State<Dashboard> {
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(const Reword());
-                    },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Flexible(
-                          child: Image.asset(
-                            "assets/images/rewords.png",
-                            width: 70,
-                            height: 70,
-                            color: const Color.fromARGB(255, 255, 0, 0),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Text("পুরষ্কার"),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: GestureDetector(
-                    onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -87,7 +62,10 @@ class _DashboardState extends State<Dashboard> {
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("টিউটর চাই"),
+                        const Text(
+                          "টিউটর চাই",
+                          style: TextStyle(fontFamily: 'Hind Siliguri Regular'),
+                        ),
                       ],
                     ),
                   ),
@@ -111,34 +89,6 @@ class _DashboardState extends State<Dashboard> {
                           height: 5,
                         ),
                         const Text("মাসিক বৃত্তি"),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ChochPro()));
-                    },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Flexible(
-                          child: Image.asset(
-                            "assets/images/coachings.png",
-                            width: 70,
-                            height: 70,
-                            color: const Color.fromARGB(255, 255, 0, 0),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Text("কোচিং"),
                       ],
                     ),
                   ),
@@ -187,7 +137,7 @@ class _DashboardState extends State<Dashboard> {
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("Exam")
+                        const Text("কুইজ টেস্ট")
                       ],
                     ),
                   ),
@@ -235,29 +185,6 @@ class _DashboardState extends State<Dashboard> {
                           height: 5,
                         ),
                         const Text("কোর্সসমূহ")
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: GestureDetector(
-                    onTap: () {
-                      Get.to(const ComingSoon());
-                    },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          "assets/images/comingsoon.png",
-                          width: 70,
-                          height: 70,
-                          color: const Color.fromARGB(255, 255, 0, 0),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Text("আসিতেছে")
                       ],
                     ),
                   ),
@@ -319,15 +246,91 @@ class _DashboardState extends State<Dashboard> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/settings.png",
+                          "assets/images/review.png",
                           width: 70,
                           height: 70,
-                          // color: const Color.fromARGB(255, 255, 0, 0),
+                          color: const Color.fromARGB(255, 255, 0, 0),
                         ),
                         const SizedBox(
                           height: 5,
                         ),
                         const Text("রিভিউ")
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.to(const Reword());
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Flexible(
+                          child: Image.asset(
+                            "assets/images/rewords.png",
+                            width: 70,
+                            height: 70,
+                            color: const Color.fromARGB(255, 255, 0, 0),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Text("পুরষ্কার"),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChochPro()));
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Flexible(
+                          child: Image.asset(
+                            "assets/images/coachings.png",
+                            width: 70,
+                            height: 70,
+                            color: const Color.fromARGB(255, 255, 0, 0),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Text("কোচিং"),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.to(const ComingSoon());
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          "assets/images/comingsoon.png",
+                          width: 70,
+                          height: 70,
+                          color: const Color.fromARGB(255, 255, 0, 0),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Text("আসছে")
                       ],
                     ),
                   ),

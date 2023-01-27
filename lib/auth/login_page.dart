@@ -32,7 +32,7 @@ class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -119,7 +119,7 @@ class LoginPageState extends State<LoginPage> {
                                       const ForgotPassPage()));
                         },
                         child: const Text(
-                          "পাসওয়ার্ড ভুলে গেছো",
+                          "পাসওয়ার্ড ভুলে গেছো ?",
                           style: TextStyle(
                             color: Color.fromARGB(255, 255, 0, 0),
                             fontWeight: FontWeight.bold,

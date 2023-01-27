@@ -103,7 +103,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
       _isBookedController.text.trim(),
     );
     Navigator.push(context,
-        MaterialPageRoute(builder: (context) => CongratsStudentReqIn()));
+        MaterialPageRoute(builder: (context) => const CongratsStudentReqIn()));
   }
 
   Future adduserDetails(
@@ -142,7 +142,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -151,22 +151,22 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
               children: [
 // hello world
                 Image.asset(
-                  "assets/inimages/LOGO.png",
+                  "assets/inimages/logob.png",
                   width: 300,
                   height: 300,
                 ),
-                Text(
-                  'Request for a tutor ',
+                const Text(
+                  'টিউটর রিকুয়েস্ট',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
 
                 AnimatedTextKit(
                   animatedTexts: [
                     TypewriterAnimatedText(
-                      'Fill the red boxes only.',
+                      'শুধু লাল বক্সগুলো পুরণ কর ',
                       textStyle: const TextStyle(
                         color: Color.fromARGB(255, 255, 0, 0),
                         fontSize: 15,
@@ -181,17 +181,18 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                   stopPauseOnTap: true,
                 ),
 
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 //first name fieldtext
 
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
-                      border: Border.all(color: Color.fromARGB(255, 255, 0, 0)),
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 255, 0, 0)),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
@@ -199,22 +200,23 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       child: TextField(
                         controller: _daysController,
                         obscureText: true,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Days',
+                          hintText: 'দিন',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 //confirm password text field
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
-                      border: Border.all(color: Color.fromARGB(255, 255, 0, 0)),
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 255, 0, 0)),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
@@ -222,9 +224,9 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       child: TextField(
                         controller: _salaryController,
                         obscureText: true,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Salary (that you want to give a tutor)',
+                          hintText: 'বেতন (মাসিক কত বেতন দিতে চান)',
                         ),
                       ),
                     ),
@@ -236,64 +238,67 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
-                      border: Border.all(color: Color.fromARGB(255, 255, 0, 0)),
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 255, 0, 0)),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _subjectController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Subject (in which you want a tutor)',
+                          hintText: 'বিষয় (আপনি কোন বিষয় পড়তে চান)',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
-                      border: Border.all(color: Color.fromARGB(255, 255, 0, 0)),
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 255, 0, 0)),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _noOfStudentController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'No of Students',
+                          hintText: 'শিক্ষার্থীর সংখ্যা',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
-                      border: Border.all(color: Color.fromARGB(255, 255, 0, 0)),
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 255, 0, 0)),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _preferableTimeController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Preferable Times',
+                          hintText: 'কোন সময়টা হলে ভালো হবে ?',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -307,15 +312,15 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _emailController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Email',
+                          hintText: 'ইমেইল',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -329,15 +334,15 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _nameController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Name',
+                          hintText: 'ব্যবহারিক নাম ',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -351,15 +356,15 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _genderController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Gender',
+                          hintText: 'আপনি ছেলে না মেয়ে ?',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -373,15 +378,15 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _religionController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Religion',
+                          hintText: 'ধর্ম',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -395,15 +400,15 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _phoneNumberController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Phone Number',
+                          hintText: 'ফোন নাম্বার',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -417,15 +422,15 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _ageController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Age',
+                          hintText: 'বয়স',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -439,15 +444,15 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _classController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Class',
+                          hintText: 'শ্রেণী',
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -461,7 +466,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _cityController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: 'City',
                         ),
@@ -469,7 +474,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -483,9 +488,9 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _detailsAddressController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'address in details',
+                          hintText: 'ঠিকানা',
                         ),
                       ),
                     ),
@@ -493,7 +498,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                 ),
 // password text field
 
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
@@ -506,7 +511,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         controller: _isBookedController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                           // hintText: 'Pending',
                         ),
@@ -516,21 +521,21 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                 ),
 // password text field
 
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // sign in button
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: GestureDetector(
                     onTap: storeReq,
                     child: Container(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 255, 0, 0),
+                        color: const Color.fromARGB(255, 255, 0, 0),
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
-                          'Request',
+                          'রিকুয়েস্ট',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -541,7 +546,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 // not a member sign up button
               ],
             ),

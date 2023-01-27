@@ -17,7 +17,7 @@ class IntroPage2 extends StatelessWidget {
             "assets/images/qualityeducation.gif",
             height: 400,
           ),
-          const Text("সহজলভ্য সুশিক্ষা",
+          const Text("সহজলভ্য শিক্ষা",
               style: TextStyle(
                   fontSize: 25,
                   color: Color.fromARGB(255, 255, 0, 0),

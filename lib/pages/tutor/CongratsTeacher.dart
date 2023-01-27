@@ -47,7 +47,7 @@ class _CongratsTeacherState extends State<CongratsTeacher> {
               height: 10,
             ),
             Text(
-              "You have created a account in our app",
+              "আমরা আপনার ডাটা স্টোর করেছি",
               style: TextStyle(
                 fontSize: 18,
               ),
@@ -56,7 +56,7 @@ class _CongratsTeacherState extends State<CongratsTeacher> {
               height: 10,
             ),
             Text(
-              "Hopefully you will get your tution soon ",
+              "আশা করি খুব শিগ্রই আপনি টিউশন পেয়ে যাবেন ",
               style: TextStyle(
                 fontSize: 18,
               ),
@@ -75,7 +75,7 @@ class _CongratsTeacherState extends State<CongratsTeacher> {
                         MaterialPageRoute(builder: (context) => TeacherMain()));
                   },
                   child: Text(
-                    " Dashboard",
+                    "ড্যাসবোর্ড",
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   )),
             ),

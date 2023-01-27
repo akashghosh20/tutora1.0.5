@@ -143,7 +143,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         centerTitle: true,
-        title: const Text("Complete Profile Page"),
+        title: const Text("আপনার প্রফাইল কমপ্লিট করুন"),
       ),
       body: Form(
         key: _formKey,
@@ -157,7 +157,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   child: Column(
                     children: [
                       const Text(
-                        "Add Picture",
+                        "ছবি যুক্ত করুন",
                         style: TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold),
                       ),
@@ -197,7 +197,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                                     onPressed: () {
                                       imagePicker();
                                     },
-                                    child: const Text("Select Image")),
+                                    child: const Text("ছবি সিলেক্ট করুন")),
                               ],
                             ),
                           ),
@@ -212,7 +212,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Email ',
+                    labelText: 'ইমেইল',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -238,7 +238,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: emailController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Email';
+                      return 'আপনার ইমেইল দিন';
                     }
                     return null;
                   },
@@ -250,7 +250,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'User Name ',
+                    labelText: 'ইউজার নেম ',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -276,7 +276,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: userNameController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter User Name';
+                      return 'আপনার ইউজার নেম  দিন';
                     }
                     return null;
                   },
@@ -288,7 +288,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Name',
+                    labelText: 'নাম',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -314,7 +314,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: nameController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Name';
+                      return 'আপনার নাম দিন';
                     }
                     return null;
                   },
@@ -326,7 +326,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Gender',
+                    labelText: 'আপনি ছেলে না মেয়ে ?',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -352,7 +352,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: genderController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Gender';
+                      return 'আপনি ছেলে না মেয়ে ?';
                     }
                     return null;
                   },
@@ -364,7 +364,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Religion',
+                    labelText: 'ধর্ম',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -390,7 +390,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: religionController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Religion';
+                      return 'আপনার ধর্ম কি ?';
                     }
                     return null;
                   },
@@ -402,7 +402,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Phone Number',
+                    labelText: 'ফোন নাম্বার',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -428,7 +428,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: phoneController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Phone Number';
+                      return 'আপনার ফোন নাম্বার দিন';
                     }
                     return null;
                   },
@@ -440,7 +440,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Age',
+                    labelText: 'বয়স',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -466,7 +466,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: ageController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Age';
+                      return 'আপনার বয়স দিন';
                     }
                     return null;
                   },
@@ -478,7 +478,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Institution',
+                    labelText: 'শিক্ষা প্রতিষ্ঠানের নাম',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -504,7 +504,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: institutionController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Institution';
+                      return 'আপনার শিক্ষা প্রতিষ্ঠানের নাম দিন ';
                     }
                     return null;
                   },
@@ -516,7 +516,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Class',
+                    labelText: 'শ্রেণী',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -542,7 +542,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: classController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Class';
+                      return 'আপনার শ্রেণী দিন';
                     }
                     return null;
                   },
@@ -554,7 +554,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'City',
+                    labelText: 'আপনার শহরের নাম',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -580,7 +580,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: cityController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your City';
+                      return 'আপনার শহরের নাম দিন';
                     }
                     return null;
                   },
@@ -592,7 +592,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Address',
+                    labelText: 'ঠিকানা',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -618,7 +618,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: addressController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Details Address';
+                      return 'আপনার ঠিকানা দিন';
                     }
                     return null;
                   },
@@ -684,7 +684,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                         }
                       },
                       child: const Text(
-                        'Complete / Update',
+                        'কমপ্লিট / আপডেট',
                         style: TextStyle(fontSize: 22.0, color: Colors.white),
                       ),
                     ),

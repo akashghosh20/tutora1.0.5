@@ -20,7 +20,7 @@ class CongratsStudent extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Flexible(child: Image.asset("assets/images/congo2.gif")),
+                      Flexible(child: Image.asset("assets/images/congi.gif")),
                     ],
                   ),
                 )
@@ -33,7 +33,7 @@ class CongratsStudent extends StatelessWidget {
               height: 10,
             ),
             const Text(
-              "We have recorded your response",
+              "আমরা আপনার ডাটা স্টোর করেছি",
               style: TextStyle(
                 fontSize: 18,
               ),
@@ -52,7 +52,7 @@ class CongratsStudent extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Usermain()));
                   },
                   child: const Text(
-                    " Dashboard",
+                    "ড্যাসবোর্ড",
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   )),
             ),

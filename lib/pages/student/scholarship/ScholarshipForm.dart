@@ -127,7 +127,7 @@ class _ScholarShip2State extends State<ScholarShip2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -136,7 +136,7 @@ class _ScholarShip2State extends State<ScholarShip2> {
               children: [
 // hello world
                 Image.asset(
-                  "assets/inimages/LOGO.png",
+                  "assets/inimages/logob.png",
                   width: 300,
                   height: 300,
                 ),

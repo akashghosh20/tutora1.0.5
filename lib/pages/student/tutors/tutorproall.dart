@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class TutorName extends StatelessWidget {
   final String id;
-  TutorName({Key? key, required this.id}) : super(key: key);
+  const TutorName({Key? key, required this.id}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +16,11 @@ class TutorName extends StatelessWidget {
       builder:
           (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
         if (snapshot.hasError) {
-          return Text("Something went wrong");
+          return const Text("Something went wrong");
         }
 
         if (snapshot.hasData && !snapshot.data!.exists) {
-          return Text("Document does not exist");
+          return const Text("Document does not exist");
         }
 
         if (snapshot.connectionState == ConnectionState.done) {
@@ -31,7 +31,7 @@ class TutorName extends StatelessWidget {
           //     "Full Name: ${data['coaching']} ${data['subject']} ${data['class']} ${data['address']}");
           return SafeArea(
             child: Container(
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 height: 1000.0,
                 // alignment: Alignment.topLeft,
                 child: Column(
@@ -39,9 +39,9 @@ class TutorName extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        color: Color.fromARGB(255, 253, 179, 179),
+                        color: const Color.fromARGB(255, 255, 240, 240),
                         alignment: Alignment.center,
-                        height: 150,
+                        height: 110,
                         margin: const EdgeInsets.all(10.0),
                         width: double.infinity,
                         child: Row(
@@ -51,35 +51,38 @@ class TutorName extends StatelessWidget {
                               Expanded(
                                 child: Image.asset(
                                   "assets/images/tutorsdp.png",
-                                  width: double.infinity,
-                                  height: double.infinity,
+                                  width: 100,
+                                  height: 100,
                                 ),
                                 flex: 1,
                               ),
                               Expanded(
                                 child: Container(
                                     margin: const EdgeInsets.all(10.0),
-                                    height: 150,
+                                    height: 110,
                                     decoration: const BoxDecoration(
                                         color:
-                                            Color.fromARGB(255, 253, 179, 179)),
+                                            Color.fromARGB(255, 255, 240, 240)),
                                     child: Column(
                                       children: [
                                         Row(
                                           children: [
-                                            Text(
+                                            const Text(
                                               'Name : ',
                                               style: TextStyle(
+                                                decoration: TextDecoration.none,
                                                 fontSize: 17,
                                                 color: Color.fromARGB(
                                                     255, 0, 0, 0),
                                                 fontWeight: FontWeight.bold,
-                                                fontFamily: 'Raleway',
+                                                fontFamily: 'Raleway'
+                                                    'Hind Siliguri Regular',
                                               ),
                                             ),
                                             Text(
                                               "${data['name']}",
-                                              style: TextStyle(
+                                              style: const TextStyle(
+                                                decoration: TextDecoration.none,
                                                 fontSize: 17,
                                                 color: Color.fromARGB(
                                                     255, 0, 0, 0),
@@ -91,9 +94,10 @@ class TutorName extends StatelessWidget {
                                         ),
                                         Row(
                                           children: [
-                                            Text(
+                                            const Text(
                                               'Classes:  ',
                                               style: TextStyle(
+                                                decoration: TextDecoration.none,
                                                 fontSize: 17,
                                                 color: Color.fromARGB(
                                                     255, 0, 0, 0),
@@ -103,7 +107,8 @@ class TutorName extends StatelessWidget {
                                             ),
                                             Text(
                                               "${data['target student']}",
-                                              style: TextStyle(
+                                              style: const TextStyle(
+                                                decoration: TextDecoration.none,
                                                 fontSize: 17,
                                                 color: Color.fromARGB(
                                                     255, 0, 0, 0),
@@ -115,9 +120,10 @@ class TutorName extends StatelessWidget {
                                         ),
                                         Row(
                                           children: [
-                                            Text(
+                                            const Text(
                                               'Subjects:  ',
                                               style: TextStyle(
+                                                decoration: TextDecoration.none,
                                                 fontSize: 17,
                                                 color: Color.fromARGB(
                                                     255, 0, 0, 0),
@@ -127,7 +133,8 @@ class TutorName extends StatelessWidget {
                                             ),
                                             Text(
                                               "${data['teaching subject']}",
-                                              style: TextStyle(
+                                              style: const TextStyle(
+                                                decoration: TextDecoration.none,
                                                 fontSize: 17,
                                                 color: Color.fromARGB(
                                                     255, 0, 0, 0),
@@ -139,9 +146,10 @@ class TutorName extends StatelessWidget {
                                         ),
                                         Row(
                                           children: [
-                                            Text(
+                                            const Text(
                                               'Reviews:  ',
                                               style: TextStyle(
+                                                decoration: TextDecoration.none,
                                                 fontSize: 17,
                                                 color: Color.fromARGB(
                                                     255, 0, 0, 0),
@@ -149,9 +157,10 @@ class TutorName extends StatelessWidget {
                                                 fontFamily: 'Raleway',
                                               ),
                                             ),
-                                            Text(
+                                            const Text(
                                               '21  ',
                                               style: TextStyle(
+                                                decoration: TextDecoration.none,
                                                 fontSize: 17,
                                                 color: Color.fromARGB(
                                                     255, 0, 0, 0),
@@ -182,9 +191,10 @@ class TutorName extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               'Tutora feedback',
                               style: TextStyle(
+                                decoration: TextDecoration.none,
                                 fontSize: 22,
                                 color: Color.fromARGB(255, 255, 0, 0),
                                 fontWeight: FontWeight.bold,
@@ -193,7 +203,8 @@ class TutorName extends StatelessWidget {
                             ),
                             Text(
                               "${data['tutorafeedback']}",
-                              style: TextStyle(
+                              style: const TextStyle(
+                                decoration: TextDecoration.none,
                                 fontSize: 18,
                                 color: Color.fromARGB(255, 0, 0, 0),
                                 fontWeight: FontWeight.normal,
@@ -211,9 +222,10 @@ class TutorName extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               'Educational background',
                               style: TextStyle(
+                                decoration: TextDecoration.none,
                                 fontSize: 22,
                                 color: Color.fromARGB(255, 247, 0, 0),
                                 fontWeight: FontWeight.bold,
@@ -222,9 +234,10 @@ class TutorName extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Text(
+                                const Text(
                                   'University :  ',
                                   style: TextStyle(
+                                    decoration: TextDecoration.none,
                                     fontSize: 17,
                                     color: Color.fromARGB(255, 0, 0, 0),
                                     fontWeight: FontWeight.bold,
@@ -233,7 +246,8 @@ class TutorName extends StatelessWidget {
                                 ),
                                 Text(
                                   "${data['university']}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
+                                    decoration: TextDecoration.none,
                                     fontSize: 17,
                                     color: Color.fromARGB(255, 0, 0, 0),
                                     fontWeight: FontWeight.normal,
@@ -244,9 +258,10 @@ class TutorName extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Text(
+                                const Text(
                                   'Subject :  ',
                                   style: TextStyle(
+                                    decoration: TextDecoration.none,
                                     fontSize: 17,
                                     color: Color.fromARGB(255, 0, 0, 0),
                                     fontWeight: FontWeight.bold,
@@ -255,7 +270,8 @@ class TutorName extends StatelessWidget {
                                 ),
                                 Text(
                                   "${data['study subject']}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
+                                    decoration: TextDecoration.none,
                                     fontSize: 17,
                                     color: Color.fromARGB(255, 0, 0, 0),
                                     fontWeight: FontWeight.normal,
@@ -266,9 +282,10 @@ class TutorName extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Text(
+                                const Text(
                                   'Study year :  ',
                                   style: TextStyle(
+                                    decoration: TextDecoration.none,
                                     fontSize: 17,
                                     color: Color.fromARGB(255, 0, 0, 0),
                                     fontWeight: FontWeight.bold,
@@ -277,7 +294,8 @@ class TutorName extends StatelessWidget {
                                 ),
                                 Text(
                                   "${data['study year']}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
+                                    decoration: TextDecoration.none,
                                     fontSize: 17,
                                     color: Color.fromARGB(255, 0, 0, 0),
                                     fontWeight: FontWeight.normal,
@@ -303,6 +321,7 @@ class TutorName extends StatelessWidget {
                                   Text(
                                     'Personal Details',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 22,
                                       color: Color.fromARGB(255, 255, 0, 0),
                                       fontWeight: FontWeight.bold,
@@ -313,9 +332,10 @@ class TutorName extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     'Age :  ',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 17,
                                       color: Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.bold,
@@ -324,7 +344,8 @@ class TutorName extends StatelessWidget {
                                   ),
                                   Text(
                                     "${data['age']}",
-                                    style: TextStyle(
+                                    style: const TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 17,
                                       color: Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.normal,
@@ -335,9 +356,10 @@ class TutorName extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     'Religion :  ',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 17,
                                       color: Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.bold,
@@ -346,7 +368,8 @@ class TutorName extends StatelessWidget {
                                   ),
                                   Text(
                                     "${data['religion']}",
-                                    style: TextStyle(
+                                    style: const TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 17,
                                       color: Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.normal,
@@ -357,9 +380,10 @@ class TutorName extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     'Present Address :  ',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 17,
                                       color: Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.bold,
@@ -368,7 +392,8 @@ class TutorName extends StatelessWidget {
                                   ),
                                   Text(
                                     "${data['presentadd']}",
-                                    style: TextStyle(
+                                    style: const TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 17,
                                       color: Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.normal,
@@ -379,9 +404,10 @@ class TutorName extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     'Permanent Address :  ',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 17,
                                       color: Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.bold,
@@ -390,7 +416,8 @@ class TutorName extends StatelessWidget {
                                   ),
                                   Text(
                                     "${data['permanentadd']}",
-                                    style: TextStyle(
+                                    style: const TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 17,
                                       color: Color.fromARGB(255, 0, 0, 0),
                                       fontWeight: FontWeight.normal,
@@ -407,7 +434,7 @@ class TutorName extends StatelessWidget {
           // this bracket is the main braket
         }
 
-        return CircularProgress();
+        return const CircularProgress();
       },
     );
   }

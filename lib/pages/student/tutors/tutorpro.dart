@@ -51,10 +51,11 @@ class _TutorProState extends State<TutorPro> {
                         'টিউটরগন ',
                         textAlign: TextAlign.center,
                         style: TextStyle(
+                          decoration: TextDecoration.none,
                           fontSize: 25,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Raleway',
+                          fontFamily: 'Raleway' 'Hind Siliguri Regular',
                         ),
                       ),
                       decoration: BoxDecoration(
@@ -101,6 +102,8 @@ class _TutorProState extends State<TutorPro> {
                                                   Text(
                                                     storedocs[i]['name'],
                                                     style: const TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 18,
                                                       color: Color.fromARGB(
                                                           255, 255, 0, 0),
@@ -118,6 +121,8 @@ class _TutorProState extends State<TutorPro> {
                                                       storedocs[i]
                                                           ['university'],
                                                       style: const TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
                                                         fontSize: 16,
                                                         color: Color.fromARGB(
                                                             255, 0, 0, 0),
@@ -134,6 +139,8 @@ class _TutorProState extends State<TutorPro> {
                                                   const Text(
                                                     'শ্রেণি:  ',
                                                     style: TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 16,
                                                       color: Color.fromARGB(
                                                           255, 0, 0, 0),
@@ -146,6 +153,8 @@ class _TutorProState extends State<TutorPro> {
                                                     storedocs[i]
                                                         ['target student'],
                                                     style: const TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 16,
                                                       color: Color.fromARGB(
                                                           255, 0, 0, 0),
@@ -162,6 +171,8 @@ class _TutorProState extends State<TutorPro> {
                                                     child: Text(
                                                       'বিষয়:  ',
                                                       style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
                                                         fontSize: 16,
                                                         color: Color.fromARGB(
                                                             255, 0, 0, 0),
@@ -175,6 +186,8 @@ class _TutorProState extends State<TutorPro> {
                                                     storedocs[i]
                                                         ['teaching subject'],
                                                     style: const TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 16,
                                                       color: Color.fromARGB(
                                                           255, 0, 0, 0),
@@ -190,6 +203,8 @@ class _TutorProState extends State<TutorPro> {
                                                   const Text(
                                                     'বেতন : ',
                                                     style: TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 16,
                                                       color: Color.fromARGB(
                                                           255, 0, 0, 0),
@@ -202,6 +217,8 @@ class _TutorProState extends State<TutorPro> {
                                                     storedocs[i]
                                                         ['asking salary'],
                                                     style: const TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 16,
                                                       color: Color.fromARGB(
                                                           255, 0, 0, 0),
@@ -217,6 +234,8 @@ class _TutorProState extends State<TutorPro> {
                                                   const Text(
                                                     'রিভিউ:  ',
                                                     style: TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 16,
                                                       color: Color.fromARGB(
                                                           255, 0, 0, 0),
@@ -228,6 +247,8 @@ class _TutorProState extends State<TutorPro> {
                                                   const Text(
                                                     '21  ',
                                                     style: const TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 16,
                                                       color: Color.fromARGB(
                                                           255, 0, 0, 0),
@@ -266,6 +287,8 @@ class _TutorProState extends State<TutorPro> {
                                                     child: Text(
                                                       'আরও জানুন',
                                                       style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
                                                         fontSize: 16,
                                                         color: Color.fromARGB(
                                                             255, 255, 0, 0),

@@ -28,6 +28,9 @@ class _AddTeacherPage extends State<AddTeacherPage> {
   var phoneNumber = "";
   var university = "";
   var teachingAreas = "";
+  var teachingyear = "";
+  var tpressentadress = "";
+  var tparmanentadress = "";
   var studySubject = "";
   var targetStudent = "";
   var days = "";
@@ -48,6 +51,9 @@ class _AddTeacherPage extends State<AddTeacherPage> {
   final phoneController = TextEditingController();
   final universityController = TextEditingController();
   final teachingAreasController = TextEditingController();
+  final teachingyearController = TextEditingController();
+  final tpressentadressController = TextEditingController();
+  final tparmanentadressController = TextEditingController();
   final studySubjectController = TextEditingController();
   final targetStudentController = TextEditingController();
   final daysController = TextEditingController();
@@ -71,6 +77,9 @@ class _AddTeacherPage extends State<AddTeacherPage> {
     ageController.dispose();
     universityController.dispose();
     teachingAreasController.dispose();
+    teachingyearController.dispose();
+    tpressentadressController.dispose();
+    tparmanentadressController.dispose();
     cityTeachingController.dispose();
     experienceController.dispose();
     askingSalaryController.dispose();
@@ -99,6 +108,9 @@ class _AddTeacherPage extends State<AddTeacherPage> {
           'university': university,
           'teaching city': teachingCity,
           'teaching areas': teachingAreas,
+          'teaching year': teachingyear,
+          'tpressentadress': tpressentadress,
+          'tparmanentadress': tparmanentadress,
           'image url': url,
           'experience': experience,
           "study subject": studySubject,
@@ -138,7 +150,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
 
   @override
   void initState() {
-    tutoraFeedbackController.text = "Category:";
+    tutoraFeedbackController.text = "null:";
     usernameController.text = UserSharedPreference().getTeacherUserName() ?? "";
     universityController.text = UserSharedPreference().getUniversity() ?? "";
     studySubjectController.text =
@@ -156,6 +168,12 @@ class _AddTeacherPage extends State<AddTeacherPage> {
     phoneController.text = UserSharedPreference().getTeacherPhone() ?? "";
     teachingAreasController.text =
         UserSharedPreference().getTeacherTeachingAreas() ?? "";
+    teachingyearController.text =
+        UserSharedPreference().getTeacherteachingyear() ?? "";
+    tpressentadressController.text =
+        UserSharedPreference().getTeachertpressentadress() ?? "";
+    tparmanentadressController.text =
+        UserSharedPreference().getTeachertpressentadress() ?? "";
     cityTeachingController.text = UserSharedPreference().getTeacherCity() ?? "";
 
     ageController.text = UserSharedPreference().getTeacherAge() ?? "";
@@ -166,7 +184,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
     teachingCityController.text =
         UserSharedPreference().getTeacherTeachingCity() ?? "";
     tutoraFeedbackController.text =
-        UserSharedPreference().getTutoraFeedback() ?? "Category:";
+        UserSharedPreference().getTutoraFeedback() ?? "null";
 
     super.initState();
   }
@@ -177,7 +195,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 255, 0, 0),
         centerTitle: true,
-        title: Text("Complete Profile Page"),
+        title: Text("আপনার প্রফাইল কমপ্লিট করুন"),
       ),
       body: Form(
         key: _formKey,
@@ -193,7 +211,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                       child: Column(
                         children: [
                           const Text(
-                            "Add Picture",
+                            "ছবি যুক্ত করুন",
                             style: TextStyle(
                                 fontSize: 22, fontWeight: FontWeight.bold),
                           ),
@@ -239,7 +257,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                                         onPressed: () {
                                           imagePicker();
                                         },
-                                        child: const Text("Select Image")),
+                                        child: const Text("ছবি সিলেক্ট করুন")),
                                   ],
                                 ),
                               ),
@@ -256,7 +274,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   autofocus: false,
                   decoration: InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Email',
+                    labelText: 'ইমেইল',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -282,19 +300,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: emailController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Email';
+                      return 'আপনার ইমেইল দিন';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'User Name',
+                    labelText: 'ব্যবহারিক নাম ',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -320,19 +338,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: usernameController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter User Name';
+                      return 'আপনার ব্যবহারিক নাম দিন';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Name',
+                    labelText: 'দিন',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -358,19 +376,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: nameController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Name';
+                      return 'আপনার নাম দিন';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Gender',
+                    labelText: 'আপনি ছেলে না মেয়ে ?',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -396,19 +414,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: confirmGenderController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Gender';
+                      return 'আপনি ছেলে না মেয়ে ?';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Religion',
+                    labelText: 'ধর্ম',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -434,19 +452,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: religionController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Religion';
+                      return 'আপনার ধর্ম কি ?';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Phone Number',
+                    labelText: 'ফোন নাম্বার',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -472,19 +490,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: phoneController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Phone Number';
+                      return 'আপনার ফোন নাম্বার দিন';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Age: ',
+                    labelText: 'বয়স',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -510,19 +528,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: ageController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Age';
+                      return 'আপনার বয়স দিন';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'University: ',
+                    labelText: 'শিক্ষা প্রতিষ্ঠানের নাম',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -548,19 +566,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: universityController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your University';
+                      return 'আপনার শিক্ষা প্রতিষ্ঠানের নাম দিন ';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Study Subject ',
+                    labelText: 'আপনার পড়ার বিষয়',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -586,19 +604,133 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: studySubjectController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Subject';
+                      return 'আপনার পড়ার বিষয় দিন';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Teaching Subjects : ',
+                    labelText: 'আপনি কোন বৎসরের ছাত্র ?',
+                    labelStyle: TextStyle(
+                        fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                      color: Color.fromARGB(255, 255, 0, 0),
+                      width: 1,
+                    )),
+                    errorStyle: TextStyle(
+                        color: Color.fromARGB(255, 255, 0, 0), fontSize: 15),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        width: 1,
+                        color: Color.fromARGB(255, 255, 0, 0),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        width: 1,
+                        color: Color.fromARGB(255, 255, 0, 0),
+                      ),
+                    ),
+                  ),
+                  controller: teachingyearController,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'আপনি কোন বৎসরের ছাত্র ?';
+                    }
+                    return null;
+                  },
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
+                child: TextFormField(
+                  autofocus: false,
+                  decoration: const InputDecoration(
+                    focusColor: Color.fromARGB(255, 255, 0, 0),
+                    labelText: 'আপনার বর্তমান ঠিকানা',
+                    labelStyle: TextStyle(
+                        fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                      color: Color.fromARGB(255, 255, 0, 0),
+                      width: 1,
+                    )),
+                    errorStyle: TextStyle(
+                        color: Color.fromARGB(255, 255, 0, 0), fontSize: 15),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        width: 1,
+                        color: Color.fromARGB(255, 255, 0, 0),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        width: 1,
+                        color: Color.fromARGB(255, 255, 0, 0),
+                      ),
+                    ),
+                  ),
+                  controller: tpressentadressController,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'আপনার বর্তমান ঠিকানা দিন';
+                    }
+                    return null;
+                  },
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
+                child: TextFormField(
+                  autofocus: false,
+                  decoration: const InputDecoration(
+                    focusColor: Color.fromARGB(255, 255, 0, 0),
+                    labelText: 'আপনার স্থায়ী ঠিকানা',
+                    labelStyle: TextStyle(
+                        fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                      color: Color.fromARGB(255, 255, 0, 0),
+                      width: 1,
+                    )),
+                    errorStyle: TextStyle(
+                        color: Color.fromARGB(255, 255, 0, 0), fontSize: 15),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        width: 1,
+                        color: Color.fromARGB(255, 255, 0, 0),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        width: 1,
+                        color: Color.fromARGB(255, 255, 0, 0),
+                      ),
+                    ),
+                  ),
+                  controller: tparmanentadressController,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'আপনার স্থায়ী ঠিকানা দিন';
+                    }
+                    return null;
+                  },
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
+                child: TextFormField(
+                  autofocus: false,
+                  decoration: const InputDecoration(
+                    focusColor: Color.fromARGB(255, 255, 0, 0),
+                    labelText: 'আপনি কোন বিষয় পড়াতে চান',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -624,19 +756,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: teachingSubjectController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Teaching SUbjects';
+                      return 'আপনি কোন বিষয় পড়াতে চান';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Teaching City : ',
+                    labelText: 'আপনার বর্তমান ঠিকানা ',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -662,19 +794,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: teachingCityController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Teaching City';
+                      return 'আপনার বর্তমান ঠিকানা দিন';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Teaching Areas: ',
+                    labelText: 'আপনি কোন শহরে পড়াবেন ?',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -700,19 +832,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: teachingAreasController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Teaching Areas';
+                      return 'আপনি কোন শহরে পড়াবেন ?';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Experience',
+                    labelText: 'পূর্ব অভিজ্ঞতা',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -738,19 +870,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: experienceController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Experince(years)';
+                      return 'পূর্ব অভিজ্ঞতা';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Target Students: ',
+                    labelText: 'আপনি কোন শ্রেণীর ছাত্র ছাত্রী পড়াতে চান',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -776,19 +908,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: targetStudentController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Target Students';
+                      return 'আপনি কোন শ্রেণীর ছাত্র ছাত্রী পড়াতে চান';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Teaching Days: ',
+                    labelText: 'আপনি সপ্তাহে কতদিন পড়াতে পারবেন?',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -814,19 +946,19 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: daysController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Teaching Days';
+                      return 'আপনি সপ্তাহে কতদিন পড়াতে পারবেন ?';
                     }
                     return null;
                   },
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Asking Salary: ',
+                    labelText: 'মাসিক বেতন কত চান',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -852,7 +984,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: askingSalaryController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Asking Salary';
+                      return 'মাসিক বেতন কত চান';
                     }
                     return null;
                   },
@@ -861,10 +993,10 @@ class _AddTeacherPage extends State<AddTeacherPage> {
               AnimatedTextKit(
                 animatedTexts: [
                   TypewriterAnimatedText(
-                    "Don't fill the Tutora FeedBack field",
+                    "নিচের ফিডব্যক বক্সটি আমরা পূরণ করবো",
                     textStyle: const TextStyle(
                       color: Color.fromARGB(255, 255, 0, 0),
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                     speed: const Duration(milliseconds: 200),
@@ -876,12 +1008,12 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                 stopPauseOnTap: true,
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'Tutora FeedBack: ',
+                    labelText: 'টিউঁটরা ফিডব্যক',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -905,18 +1037,12 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                     ),
                   ),
                   controller: tutoraFeedbackController,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please Enter Your Asking Salary';
-                    }
-                    return null;
-                  },
                 ),
               ),
               Container(
                 height: 60,
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(
+                    color: const Color.fromARGB(
                       255,
                       255,
                       0,
@@ -929,7 +1055,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                     TextButton(
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
-                              Color.fromARGB(255, 255, 0, 0))),
+                              const Color.fromARGB(255, 255, 0, 0))),
                       onPressed: () {
                         // Validate returns true if the form is valid, otherwise false.
                         if (_formKey.currentState!.validate()) {
@@ -950,6 +1076,9 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                             askingSalary = askingSalaryController.text;
                             targetStudent = targetStudentController.text;
                             teachingAreas = teachingAreasController.text;
+                            teachingyear = teachingyearController.text;
+                            tpressentadress = tpressentadressController.text;
+                            tparmanentadress = tparmanentadressController.text;
                             teachingCity = teachingCityController.text;
 
                             addUser();
@@ -987,6 +1116,15 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                             await UserSharedPreference()
                                 .setTeacherTeachingAreas(
                                     teachingAreasController.text);
+                            await UserSharedPreference().setTeacherteachingyear(
+                                teachingyearController.text);
+                            await UserSharedPreference()
+                                .setTeachertpressentadress(
+                                    tpressentadressController.text);
+                            await UserSharedPreference()
+                                .setTeachertpressentadress(
+                                    tparmanentadressController.text);
+
                             await UserSharedPreference()
                                 .setTeacherName(nameController.text);
                             await UserSharedPreference().setTeacherTeachingCity(
@@ -998,8 +1136,8 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                           });
                         }
                       },
-                      child: Text(
-                        'Complete / Update',
+                      child: const Text(
+                        'কমপ্লিট / আপডেট',
                         style: TextStyle(fontSize: 22.0, color: Colors.white),
                       ),
                     ),
