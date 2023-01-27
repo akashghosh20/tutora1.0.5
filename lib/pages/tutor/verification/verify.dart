@@ -176,13 +176,13 @@ class _VerifyState extends State<Verify> {
               children: [
 // hello world
                 Image.asset(
-                  "assets/inimages/LOGO.png",
+                  "assets/inimages/logob.png",
                   width: 300,
                   height: 300,
                 ),
                 SizedBox(height: 10),
                 Text(
-                  'Request for verification',
+                  'ভেরিফিকেশনের জন্য রিকুয়েস্ট',
                   style: TextStyle(
                     fontSize: 20,
                   ),
@@ -192,12 +192,12 @@ class _VerifyState extends State<Verify> {
                 AnimatedTextKit(
                   animatedTexts: [
                     TypewriterAnimatedText(
-                      'Enter the transaction id and click on request verification.',
+                      'লাল বক্সটিতে শুধুমাত্র ট্রানজেকশন আইডি লিখুন ',
                       textStyle: const TextStyle(
-                        color: Color.fromARGB(255, 255, 0, 0),
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
+                          color: Color.fromARGB(255, 255, 0, 0),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Hind Siliguri Regular'),
                       speed: const Duration(milliseconds: 200),
                     ),
                   ],
@@ -557,7 +557,7 @@ class _VerifyState extends State<Verify> {
                       ),
                       child: Center(
                         child: Text(
-                          'Request Verification',
+                          'রিকুয়েস্ট ভেরিফিকেশন',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

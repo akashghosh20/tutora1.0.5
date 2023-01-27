@@ -27,18 +27,31 @@ class _RequestVerificationState extends State<RequestVerification> {
                 height: 10,
               ),
               const Text(
-                "আপনার প্রথমে ১৫০০ টাকা দিয়ে ভেরিফিকেসন রিকুয়েস্ট করতে হবে",
+                "আপনাকে প্রথমে  ভেরিফিকেশনের জন্য ১৫০০ টাকা দিয়ে রিকুয়েস্ট করতে হবে।",
                 style: TextStyle(fontSize: 20),
               ),
               const SizedBox(
                 height: 30,
               ),
               const Text(
-                "নিচের বাটনে ক্লিক করে  রিকুয়েস্ট পেজে জান ",
-                style: TextStyle(fontSize: 20),
+                "বিকাশ পেমেন্টঃ ০১৭৮৫-৮৭১৯৩২",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              const Text(
+                "নগদ পেমেন্টঃ ০১৫৭১-০৪৮৯৭১",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 20,
+              ),
+              const Text(
+                "পেমেন্ট সম্পন্ন হলে নিচের বাটনতিতে ক্লিক করুন।",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+              const SizedBox(
+                height: 30,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55.0),
@@ -54,7 +67,7 @@ class _RequestVerificationState extends State<RequestVerification> {
                     ),
                     child: Center(
                       child: const Text(
-                        'রিকুয়েস্ট ভেরিফিকেসন',
+                        'রিকুয়েস্ট ভেরিফিকেশন',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,

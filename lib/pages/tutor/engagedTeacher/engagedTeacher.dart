@@ -63,7 +63,7 @@ class _EnagedTeacherState extends State<EnagedTeacher> {
         "Complete your profile first";
     teachingSubject = UserSharedPreference().getTeacherTeachingSubjects() ??
         "Complete your profile first";
-    address = UserSharedPreference().getTeacherTeachingCity() ??
+    address = UserSharedPreference().getTeacherTeachingAreas() ??
         "Complete your profile first";
     setState(() {});
     _nameController.text = name!;

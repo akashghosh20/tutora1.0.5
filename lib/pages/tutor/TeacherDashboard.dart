@@ -1,3 +1,4 @@
+import 'package:Tutora/pages/tutor/HowItWork/howItWork1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:Tutora/pages/ComingSoon.dart';
@@ -129,10 +130,7 @@ class _DashboardState extends State<Dashboard> {
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const WorksOne()));
+                      Get.to(howItWork1());
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,

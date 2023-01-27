@@ -51,7 +51,7 @@ class _PopUpTeacherState extends State<PopUpTeacher> {
                             Get.to(TeacherMain());
                           },
                           child: Text(
-                            "ড্যাসবোর্ড ",
+                            "ড্যাশবোর্ড ",
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,

@@ -26,7 +26,7 @@ class _VerifyExperienceState extends State<VerifyExperience> {
               height: 20,
             ),
             const Text(
-              "ভেরিফিকেসন আপনার যোগ্যতা জাছাই করতে আমাদের সাহাজ্য করবে এবং আপনাকে আরও টিউশন পেতে সাহাজ্য করবে",
+              "ভেরিফিকেশন আপনার যোগ্যতা যাচাই করতে আমাদের সাহায্য করবে এবং আপনাকে আরও টিউশন পেতে সাহায্য করবে।",
               overflow: TextOverflow.visible,
               style: TextStyle(fontSize: 20),
             ),
@@ -34,7 +34,7 @@ class _VerifyExperienceState extends State<VerifyExperience> {
               height: 20,
             ),
             const Text(
-              "আপনার বেতন বাড়িয়ে দেয়া হবে  ",
+              "আপনার যোগ্যতা অনুযায়ী বেতন বাড়িয়ে দেয়া হবে।",
               overflow: TextOverflow.visible,
               style: TextStyle(fontSize: 20),
             ),

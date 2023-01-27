@@ -35,7 +35,6 @@ class _AddTeacherPage extends State<AddTeacherPage> {
   var targetStudent = "";
   var days = "";
   var experience = "";
-  var teachingCity = "";
   var askingSalary = "";
   var teachingSubject = "";
   var tutoraFeedBack = "";
@@ -106,7 +105,6 @@ class _AddTeacherPage extends State<AddTeacherPage> {
           'phone number': phoneNumber,
           'age': age,
           'university': university,
-          'teaching city': teachingCity,
           'teaching areas': teachingAreas,
           'teaching year': teachingyear,
           'tpressentadress': tpressentadress,
@@ -181,8 +179,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
     religionController.text = UserSharedPreference().getTeacherReligion() ?? "";
     teachingSubjectController.text =
         UserSharedPreference().getTeacherTeachingSubjects() ?? "";
-    teachingCityController.text =
-        UserSharedPreference().getTeacherTeachingCity() ?? "";
+
     tutoraFeedbackController.text =
         UserSharedPreference().getTutoraFeedback() ?? "null";
 
@@ -312,7 +309,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'ব্যবহারিক নাম ',
+                    labelText: 'ইউজার নাম ',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -338,7 +335,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   controller: usernameController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'আপনার ব্যবহারিক নাম দিন';
+                      return 'আপনার ইউজার নাম দিন';
                     }
                     return null;
                   },
@@ -350,7 +347,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'দিন',
+                    labelText: 'আপনার নাম',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -762,44 +759,44 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   },
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 10.0),
-                child: TextFormField(
-                  autofocus: false,
-                  decoration: const InputDecoration(
-                    focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'আপনার বর্তমান ঠিকানা ',
-                    labelStyle: TextStyle(
-                        fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                      color: Color.fromARGB(255, 255, 0, 0),
-                      width: 1,
-                    )),
-                    errorStyle: TextStyle(
-                        color: Color.fromARGB(255, 255, 0, 0), fontSize: 15),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 1,
-                        color: Color.fromARGB(255, 255, 0, 0),
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 1,
-                        color: Color.fromARGB(255, 255, 0, 0),
-                      ),
-                    ),
-                  ),
-                  controller: teachingCityController,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'আপনার বর্তমান ঠিকানা দিন';
-                    }
-                    return null;
-                  },
-                ),
-              ),
+              // Container(
+              //   margin: const EdgeInsets.symmetric(vertical: 10.0),
+              //   child: TextFormField(
+              //     autofocus: false,
+              //     decoration: const InputDecoration(
+              //       focusColor: Color.fromARGB(255, 255, 0, 0),
+              //       labelText: 'আপনার বর্তমান ঠিকানা ',
+              //       labelStyle: TextStyle(
+              //           fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
+              //       border: OutlineInputBorder(
+              //           borderSide: BorderSide(
+              //         color: Color.fromARGB(255, 255, 0, 0),
+              //         width: 1,
+              //       )),
+              //       errorStyle: TextStyle(
+              //           color: Color.fromARGB(255, 255, 0, 0), fontSize: 15),
+              //       enabledBorder: OutlineInputBorder(
+              //         borderSide: BorderSide(
+              //           width: 1,
+              //           color: Color.fromARGB(255, 255, 0, 0),
+              //         ),
+              //       ),
+              //       focusedBorder: OutlineInputBorder(
+              //         borderSide: BorderSide(
+              //           width: 1,
+              //           color: Color.fromARGB(255, 255, 0, 0),
+              //         ),
+              //       ),
+              //     ),
+              //     controller: teachingCityController,
+              //     validator: (value) {
+              //       if (value == null || value.isEmpty) {
+              //         return 'আপনার বর্তমান ঠিকানা দিন';
+              //       }
+              //       return null;
+              //     },
+              //   ),
+              // ),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
@@ -1068,7 +1065,6 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                             phoneNumber = phoneController.text;
                             age = ageController.text;
                             university = universityController.text;
-                            teachingCity = cityTeachingController.text;
                             experience = experienceController.text;
                             days = daysController.text;
                             studySubject = studySubjectController.text;
@@ -1079,7 +1075,6 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                             teachingyear = teachingyearController.text;
                             tpressentadress = tpressentadressController.text;
                             tparmanentadress = tparmanentadressController.text;
-                            teachingCity = teachingCityController.text;
 
                             addUser();
 
@@ -1122,7 +1117,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                                 .setTeachertpressentadress(
                                     tpressentadressController.text);
                             await UserSharedPreference()
-                                .setTeachertpressentadress(
+                                .setTeachertparmanentadresss(
                                     tparmanentadressController.text);
 
                             await UserSharedPreference()
@@ -1131,6 +1126,8 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                                 teachingCityController.text);
                             await UserSharedPreference().setGetTutoraFeedback(
                                 tutoraFeedbackController.text);
+                            await UserSharedPreference().setTeacherExperience(
+                                experienceController.text);
 
                             Get.to(CongratsTeacher());
                           });

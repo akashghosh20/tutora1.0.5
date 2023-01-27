@@ -50,7 +50,7 @@ class _PopUpStudentState extends State<PopUpStudent> {
                             Get.to(Usermain());
                           },
                           child: Text(
-                            "ড্যাসবোর্ড ",
+                            "ড্যাশবোর্ড ",
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,
