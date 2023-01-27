@@ -1,4 +1,5 @@
 import 'package:Tutora/pages/student/query/ans.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:custom_rating_bar/custom_rating_bar.dart';
@@ -17,7 +18,7 @@ class _QueryStudentState extends State<QueryStudent> {
   var review = "";
 
   var username = "";
-  var ans = "";
+  var ans = "ans";
   int id = 1;
   // Create a text controller and use it to retrieve the current value
   // of the TextField.
@@ -122,24 +123,35 @@ class _QueryStudentState extends State<QueryStudent> {
                   },
                 ),
               ),
+              AnimatedTextKit(
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                    'এই ফিল্ডটি আমরা পূরণ করব',
+                    textStyle: const TextStyle(
+                      color: Color.fromARGB(255, 255, 0, 0),
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    speed: const Duration(milliseconds: 200),
+                  ),
+                ],
+                totalRepeatCount: 5,
+                pause: const Duration(milliseconds: 1000),
+                displayFullTextOnTap: true,
+                stopPauseOnTap: true,
+              ),
+              const SizedBox(height: 20),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TextFormField(
                   autofocus: false,
                   decoration: const InputDecoration(
-                    labelText: 'আপনার প্রশ্নের উত্তর ',
                     labelStyle: TextStyle(fontSize: 20.0),
                     border: OutlineInputBorder(),
                     errorStyle:
                         TextStyle(color: Colors.redAccent, fontSize: 15),
                   ),
                   controller: ansController,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please Enter user';
-                    }
-                    return null;
-                  },
                 ),
               ),
               SizedBox(

@@ -99,17 +99,19 @@ class _ansQueryState extends State<ansQuery> {
                                             children: [
                                               Row(
                                                 children: [
-                                                  Text(
-                                                    'নামঃ ${storedocs[i]['name']}',
-                                                    style: const TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      fontSize: 18,
-                                                      color: Color.fromARGB(
-                                                          255, 255, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: Text(
+                                                      'নামঃ ${storedocs[i]['name']}',
+                                                      style: const TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 18,
+                                                        color: Color.fromARGB(
+                                                            255, 255, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
