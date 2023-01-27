@@ -1,6 +1,8 @@
+import 'package:Tutora/pages/student/query/ans.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:custom_rating_bar/custom_rating_bar.dart';
+import 'package:get/get.dart';
 
 class QueryStudent extends StatefulWidget {
   QueryStudent({Key? key}) : super(key: key);
@@ -171,6 +173,30 @@ class _QueryStudentState extends State<QueryStudent> {
                       ),
                     )),
               ),
+              SizedBox(
+                height: 50,
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 255, 0, 0),
+                  borderRadius: BorderRadius.all(Radius.circular(18)),
+                ),
+                child: TextButton(
+                    style: TextButton.styleFrom(fixedSize: const Size(180, 50)),
+                    onPressed: () {
+                      {
+                        Get.to(ansQuery());
+                      }
+                    },
+                    child: Text(
+                      "কমন প্রশ্ন ও উত্তর",
+                      style: const TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    )),
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
