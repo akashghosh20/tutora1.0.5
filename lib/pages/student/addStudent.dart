@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
@@ -205,6 +206,29 @@ class _AddStudentPageState extends State<AddStudentPage> {
                       ),
                     ],
                   )),
+              SizedBox(
+                height: 20,
+              ),
+              Center(
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText(
+                      'ছবি অবশ্যই দিতে হবে',
+                      textStyle: const TextStyle(
+                        color: Color.fromARGB(255, 255, 0, 0),
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      speed: const Duration(milliseconds: 200),
+                    ),
+                  ],
+                  totalRepeatCount: 5,
+                  pause: const Duration(milliseconds: 1000),
+                  displayFullTextOnTap: true,
+                  stopPauseOnTap: true,
+                ),
+              ),
+              SizedBox(height: 20),
               Container(
                 // this container is the value box for taking inputs
                 margin: const EdgeInsets.symmetric(vertical: 10.0),

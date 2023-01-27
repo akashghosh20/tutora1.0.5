@@ -264,6 +264,29 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                       )),
                 ],
               ),
+              SizedBox(
+                height: 20,
+              ),
+              Center(
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText(
+                      'ছবি অবশ্যই দিতে হবে',
+                      textStyle: const TextStyle(
+                        color: Color.fromARGB(255, 255, 0, 0),
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      speed: const Duration(milliseconds: 200),
+                    ),
+                  ],
+                  totalRepeatCount: 5,
+                  pause: const Duration(milliseconds: 1000),
+                  displayFullTextOnTap: true,
+                  stopPauseOnTap: true,
+                ),
+              ),
+              SizedBox(height: 20),
               Container(
                 // this container is the value box for taking inputs
                 margin: const EdgeInsets.symmetric(vertical: 10.0),
