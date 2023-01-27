@@ -126,7 +126,7 @@ class _QueryStudentState extends State<QueryStudent> {
               AnimatedTextKit(
                 animatedTexts: [
                   TypewriterAnimatedText(
-                    'এই ফিল্ডটি আমরা পূরণ করব',
+                    'নিচের ফিল্ডটি আমরা পূরণ করব',
                     textStyle: const TextStyle(
                       color: Color.fromARGB(255, 255, 0, 0),
                       fontSize: 15,
