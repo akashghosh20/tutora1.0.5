@@ -1,4 +1,5 @@
 import 'package:Tutora/pages/student/query/ans.dart';
+import 'package:Tutora/pages/student/query/popQAStudent.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -174,6 +175,7 @@ class _QueryStudentState extends State<QueryStudent> {
 
                           addUser();
                           clearText();
+                          Get.to(popQAStudent());
                         });
                       }
                     },
