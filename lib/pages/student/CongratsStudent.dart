@@ -52,7 +52,7 @@ class CongratsStudent extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Usermain()));
                   },
                   child: const Text(
-                    "ড্যাসবোর্ড",
+                    "ড্যাশবোর্ড",
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   )),
             ),

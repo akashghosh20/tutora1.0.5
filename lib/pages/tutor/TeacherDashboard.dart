@@ -1,4 +1,5 @@
 import 'package:Tutora/pages/tutor/HowItWork/howItWork1.dart';
+import 'package:Tutora/pages/tutor/query/query.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:Tutora/pages/ComingSoon.dart';
@@ -176,7 +177,7 @@ class _DashboardState extends State<Dashboard> {
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(const ComingSoon());
+                      Get.to(QueryTeacher());
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -190,7 +191,7 @@ class _DashboardState extends State<Dashboard> {
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("আসছে")
+                        const Text("যেকোন জিজ্ঞাসা")
                       ],
                     ),
                   ),

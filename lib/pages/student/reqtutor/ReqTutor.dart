@@ -1,8 +1,10 @@
+import 'package:Tutora/pages/student/CongratsStudent.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:Tutora/pages/localdata.dart';
 import 'package:Tutora/pages/student/reqtutor/CongratsStudentInreq.dart';
+import 'package:get/get.dart';
 
 class RequestTutorInStudent extends StatefulWidget {
   const RequestTutorInStudent({
@@ -102,8 +104,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
       _preferableTimeController.text.trim(),
       _isBookedController.text.trim(),
     );
-    Navigator.push(context,
-        MaterialPageRoute(builder: (context) => const CongratsStudentReqIn()));
+    Get.to(CongratsStudent());
   }
 
   Future adduserDetails(
