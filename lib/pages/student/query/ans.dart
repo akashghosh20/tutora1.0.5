@@ -126,9 +126,29 @@ class _ansQueryState extends State<ansQuery> {
                                                     ),
                                                     Row(
                                                       children: [
+                                                        Text(
+                                                          'প্রশ্নঃ  ',
+                                                          style: TextStyle(
+                                                            decoration:
+                                                                TextDecoration
+                                                                    .none,
+                                                            fontSize: 16,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    0,
+                                                                    0,
+                                                                    0),
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            fontFamily:
+                                                                'Raleway',
+                                                          ),
+                                                        ),
                                                         Flexible(
                                                           child: Text(
-                                                            'প্রশ্নঃ ${storedocs[i]['question']}',
+                                                            storedocs[i]
+                                                                ['question'],
                                                             style:
                                                                 const TextStyle(
                                                               decoration:
@@ -140,7 +160,7 @@ class _ansQueryState extends State<ansQuery> {
                                                                       0, 0, 0),
                                                               fontWeight:
                                                                   FontWeight
-                                                                      .bold,
+                                                                      .normal,
                                                               fontFamily:
                                                                   'Raleway',
                                                             ),
