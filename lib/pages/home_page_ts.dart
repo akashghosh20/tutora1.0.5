@@ -85,31 +85,6 @@ class _HomepageTSState extends State<HomepageTS> {
             ),
             const SizedBox(height: 20),
             const SizedBox(height: 15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  "অথবা",
-                  style: TextStyle(fontSize: 18),
-                ),
-                TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AuthPage()));
-                    },
-                    child: const Text(
-                      "সাইন ইন",
-                      style: TextStyle(
-                          fontSize: 18, color: Color.fromARGB(255, 255, 0, 0)),
-                    )),
-                const Text(
-                  "এখানে",
-                  style: TextStyle(fontSize: 18),
-                ),
-              ],
-            ),
           ],
         ),
       ),

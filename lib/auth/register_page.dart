@@ -28,13 +28,31 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   Future signUp() async {
-    if (passwordConfirmed()) {
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: _emailController.text.trim(),
-        password: _passwordController.text.trim(),
-      );
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomepageTS()));
+    try {
+      if (passwordConfirmed()) {
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: _emailController.text.trim(),
+          password: _passwordController.text.trim(),
+        );
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomepageTS()));
+      } else {
+        showDialog(
+            context: context,
+            builder: ((context) {
+              return AlertDialog(
+                title: Text("Password didn.t match"),
+              );
+            }));
+      }
+    } on FirebaseAuthException catch (e) {
+      showDialog(
+          context: context,
+          builder: ((context) {
+            return AlertDialog(
+              title: Text("${e.message}"),
+            );
+          }));
     }
   }
 
@@ -96,8 +114,16 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
+                      child: TextFormField(
                         controller: _emailController,
+                        validator: (value) {
+                          if (value == null ||
+                              value.isEmpty ||
+                              !value.contains('@')) {
+                            return 'আপনার সঠিক ইমেইল দিন';
+                          }
+                          return null;
+                        },
                         decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: 'ইমেইল',
