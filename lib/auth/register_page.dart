@@ -16,6 +16,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmpasswordcontroller = TextEditingController();
+  bool _passwordVisible = true;
 
   @override
   void dispose() {
@@ -25,6 +26,12 @@ class _RegisterPageState extends State<RegisterPage> {
     _confirmpasswordcontroller.dispose();
 
     super.dispose();
+  }
+
+  @override
+  void initState() {
+    _passwordVisible = false;
+    super.initState();
   }
 
   Future signUp() async {
@@ -142,21 +149,36 @@ class _RegisterPageState extends State<RegisterPage> {
                       border: Border.all(color: Colors.white),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
-                        controller: _passwordController,
-                        obscureText: true,
-                        decoration: const InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'পাসওয়ার্ড',
+                    child: TextFormField(
+                      // keyboardType: TextInputType.text,
+                      controller: _passwordController,
+                      obscureText:
+                          !_passwordVisible, //This will obscure text dynamically
+                      decoration: InputDecoration(
+                        hintText: 'তোমার পাসওয়ার্ড দাও',
+                        border: InputBorder.none,
+
+                        // Here is key idea
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            // Based on passwordVisible state choose the icon
+                            _passwordVisible
+                                ? Icons.visibility
+                                : Icons.visibility_off,
+                            color: Theme.of(context).primaryColorDark,
+                          ),
+                          onPressed: () {
+                            // Update the state i.e. toogle the state of passwordVisible variable
+                            setState(() {
+                              _passwordVisible = !_passwordVisible;
+                            });
+                          },
                         ),
                       ),
                     ),
                   ),
                 ),
                 const SizedBox(height: 20),
-//confirm password text field
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
@@ -165,14 +187,30 @@ class _RegisterPageState extends State<RegisterPage> {
                       border: Border.all(color: Colors.white),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
-                        controller: _confirmpasswordcontroller,
-                        obscureText: true,
-                        decoration: const InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'পুনরায় পাসওয়ার্ড লিখো',
+                    child: TextFormField(
+                      keyboardType: TextInputType.text,
+                      controller: _confirmpasswordcontroller,
+                      obscureText:
+                          !_passwordVisible, //This will obscure text dynamically
+                      decoration: InputDecoration(
+                        hintText: 'তোমার পাসওয়ার্ড কনফার্ম কর',
+                        border: InputBorder.none,
+
+                        // Here is key idea
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            // Based on passwordVisible state choose the icon
+                            _passwordVisible
+                                ? Icons.visibility
+                                : Icons.visibility_off,
+                            color: Theme.of(context).primaryColorDark,
+                          ),
+                          onPressed: () {
+                            // Update the state i.e. toogle the state of passwordVisible variable
+                            setState(() {
+                              _passwordVisible = !_passwordVisible;
+                            });
+                          },
                         ),
                       ),
                     ),

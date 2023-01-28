@@ -78,7 +78,7 @@ class _TutionNearMeState extends State<TutionNearMe> {
                             Container(
                               color: const Color.fromARGB(255, 255, 233, 233),
                               alignment: Alignment.center,
-                              height: 280,
+                              height: 300,
                               margin: const EdgeInsets.all(10.0),
                               width: double.infinity,
                               child: Row(

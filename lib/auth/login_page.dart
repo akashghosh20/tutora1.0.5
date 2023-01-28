@@ -14,6 +14,7 @@ class LoginPageState extends State<LoginPage> {
   //text controller
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  bool _passwordVisible = true;
 
   Future signIn() async {
     try {
@@ -37,6 +38,12 @@ class LoginPageState extends State<LoginPage> {
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
+  }
+
+  @override
+  void initState() {
+    _passwordVisible = false;
+    super.initState();
   }
 
   @override
@@ -99,14 +106,30 @@ class LoginPageState extends State<LoginPage> {
                       border: Border.all(color: Colors.white),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
-                        controller: _passwordController,
-                        obscureText: true,
-                        decoration: const InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'পাসওয়ার্ড',
+                    child: TextFormField(
+                      // keyboardType: TextInputType.text,
+                      controller: _passwordController,
+                      obscureText:
+                          !_passwordVisible, //This will obscure text dynamically
+                      decoration: InputDecoration(
+                        hintText: 'তোমার পাসওয়ার্ড দাও',
+                        border: InputBorder.none,
+
+                        // Here is key idea
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            // Based on passwordVisible state choose the icon
+                            _passwordVisible
+                                ? Icons.visibility
+                                : Icons.visibility_off,
+                            color: Theme.of(context).primaryColorDark,
+                          ),
+                          onPressed: () {
+                            // Update the state i.e. toogle the state of passwordVisible variable
+                            setState(() {
+                              _passwordVisible = !_passwordVisible;
+                            });
+                          },
                         ),
                       ),
                     ),
