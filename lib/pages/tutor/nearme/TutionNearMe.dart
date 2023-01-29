@@ -87,7 +87,7 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                   children: [
                                     Expanded(
                                       child: Image.asset(
-                                        "assets/inimages/dp.png",
+                                        "assets/images/profile.png",
                                         width: double.infinity,
                                         height: double.infinity,
                                       ),
