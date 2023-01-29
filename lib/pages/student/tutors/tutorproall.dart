@@ -293,7 +293,7 @@ class TutorName extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  "${data['study year']}",
+                                  "${data['teaching year']}",
                                   style: const TextStyle(
                                     decoration: TextDecoration.none,
                                     fontSize: 17,
@@ -391,7 +391,7 @@ class TutorName extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "${data['presentadd']}",
+                                    "${data['tpressentadress']}",
                                     style: const TextStyle(
                                       decoration: TextDecoration.none,
                                       fontSize: 17,
@@ -415,7 +415,31 @@ class TutorName extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "${data['permanentadd']}",
+                                    "${data['tparmanentadress']}",
+                                    style: const TextStyle(
+                                      decoration: TextDecoration.none,
+                                      fontSize: 17,
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      fontWeight: FontWeight.normal,
+                                      fontFamily: 'Raleway',
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  const Text(
+                                    'Experience :  ',
+                                    style: TextStyle(
+                                      decoration: TextDecoration.none,
+                                      fontSize: 17,
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'Raleway',
+                                    ),
+                                  ),
+                                  Text(
+                                    "${data['experience']}",
                                     style: const TextStyle(
                                       decoration: TextDecoration.none,
                                       fontSize: 17,
