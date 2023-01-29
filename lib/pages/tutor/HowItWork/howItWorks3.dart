@@ -25,7 +25,7 @@ class _howItWorks3State extends State<howItWorks3> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("assets/images/vgif.gif"),
+            Image.asset("assets/images/handshake.gif"),
             SizedBox(
               height: 25,
             ),
