@@ -32,6 +32,9 @@ class _DashboardState extends State<Dashboard> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
+                    onTap: () {
+                      Get.to(ComingSoon());
+                    },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -82,6 +85,9 @@ class _DashboardState extends State<Dashboard> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
+                    onTap: () {
+                      Get.to(ComingSoon());
+                    },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
