@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:Tutora/pages/localdata.dart';
 import 'package:Tutora/pages/student/reqtutor/CongratsStudentInreq.dart';
 
-class EnagedTeacher extends StatefulWidget {
-  const EnagedTeacher({
+class ExtraEarningTwo extends StatefulWidget {
+  const ExtraEarningTwo({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<EnagedTeacher> createState() => _EnagedTeacherState();
+  State<ExtraEarningTwo> createState() => _ExtraEarningTwoState();
 }
 
-class _EnagedTeacherState extends State<EnagedTeacher> {
+class _ExtraEarningTwoState extends State<ExtraEarningTwo> {
   final _subjectController = TextEditingController();
   final _emailController = TextEditingController();
   final _nameController = TextEditingController();
@@ -128,7 +128,7 @@ class _EnagedTeacherState extends State<EnagedTeacher> {
     String religion,
     String tutionId,
   ) async {
-    await FirebaseFirestore.instance.collection('engagedTeacher').add({
+    await FirebaseFirestore.instance.collection('extraearning').add({
       'study subject': studySubject,
       'email': email,
       'name': name,
@@ -160,7 +160,7 @@ class _EnagedTeacherState extends State<EnagedTeacher> {
                   height: 300,
                 ),
                 Text(
-                  'টিউশন বুকিং ফর্ম ',
+                  'এক্সট্রা আর্নিং ফর্ম ',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
@@ -188,26 +188,7 @@ class _EnagedTeacherState extends State<EnagedTeacher> {
                 SizedBox(height: 20),
                 SizedBox(height: 20),
 // email textfield
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
-                        controller: _tutionIdController,
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Tution ID',
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+
                 SizedBox(
                   height: 20,
                 ),
