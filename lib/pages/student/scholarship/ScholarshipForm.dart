@@ -1,3 +1,4 @@
+import 'package:Tutora/pages/student/CongratsStudent.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -97,7 +98,7 @@ class _ScholarShip2State extends State<ScholarShip2> {
       _noOfStudentController.text.trim(),
     );
     Navigator.push(context,
-        MaterialPageRoute(builder: (context) => const CongratsStudentReqIn()));
+        MaterialPageRoute(builder: (context) => const CongratsStudent()));
   }
 
   Future adduserDetails(

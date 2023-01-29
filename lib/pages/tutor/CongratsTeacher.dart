@@ -1,14 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:Tutora/pages/tutor/TeacherMain.dart';
+import 'package:flutter/material.dart';
+import 'package:Tutora/pages/student/usermain.dart';
 
-class CongratsTeacher extends StatefulWidget {
-  CongratsTeacher({Key? key}) : super(key: key);
+class CongratsTeacher extends StatelessWidget {
+  const CongratsTeacher({Key? key}) : super(key: key);
 
-  @override
-  State<CongratsTeacher> createState() => _CongratsTeacherState();
-}
-
-class _CongratsTeacherState extends State<CongratsTeacher> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,57 +21,39 @@ class _CongratsTeacherState extends State<CongratsTeacher> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Flexible(
-                          child:
-                              Image.asset("assets/images/studywithlaptop.gif")),
+                      Flexible(child: Image.asset("assets/images/congi.gif")),
                     ],
                   ),
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text(
-              "Congratulations Teacher",
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               "আমরা আপনার ডাটা স্টোর করেছি",
               style: TextStyle(
                 fontSize: 18,
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              "আশা করি খুব শিগ্রই আপনি টিউশন পেয়ে যাবেন ",
-              style: TextStyle(
-                fontSize: 18,
-              ),
-            ),
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(18)),
-                  color: Colors.red),
+                  color: Color.fromARGB(255, 255, 0, 0)),
               child: TextButton(
                   style: TextButton.styleFrom(fixedSize: const Size(180, 50)),
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => TeacherMain()));
                   },
-                  child: Text(
-                    "ড্যাসবোর্ড",
+                  child: const Text(
+                    "ড্যাশবোর্ড",
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   )),
             ),

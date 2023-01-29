@@ -1,3 +1,4 @@
+import 'package:Tutora/pages/tutor/CongratsTeacher.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -125,7 +126,7 @@ class _VerifyState extends State<Verify> {
       _transactionIdController.text.trim(),
     );
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => TeacherMain()));
+        context, MaterialPageRoute(builder: (context) => CongratsTeacher()));
   }
 
   Future adduserDetails(
