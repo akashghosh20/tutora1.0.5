@@ -750,7 +750,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'আপনি কোন বিষয় পড়াতে চান',
+                    labelText: 'আপনি কোন বিষয় পড়াতে চান(সর্বোচ্চ ২টি)',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(
@@ -864,7 +864,7 @@ class _AddTeacherPage extends State<AddTeacherPage> {
                   autofocus: false,
                   decoration: const InputDecoration(
                     focusColor: Color.fromARGB(255, 255, 0, 0),
-                    labelText: 'পূর্ব অভিজ্ঞতা',
+                    labelText: 'কয় বছরের পড়ানোর অভিজ্ঞতা আছে',
                     labelStyle: TextStyle(
                         fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
                     border: OutlineInputBorder(

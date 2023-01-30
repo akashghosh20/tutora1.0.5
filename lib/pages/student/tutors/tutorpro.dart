@@ -73,7 +73,7 @@ class _TutorProState extends State<TutorPro> {
                             Container(
                               color: const Color.fromARGB(255, 255, 233, 233),
                               alignment: Alignment.center,
-                              height: 200,
+                              height: 300,
                               margin: const EdgeInsets.all(10.0),
                               width: double.infinity,
                               child: Row(
@@ -99,17 +99,19 @@ class _TutorProState extends State<TutorPro> {
                                             children: [
                                               Row(
                                                 children: [
-                                                  Text(
-                                                    storedocs[i]['name'],
-                                                    style: const TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      fontSize: 18,
-                                                      color: Color.fromARGB(
-                                                          255, 255, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: Text(
+                                                      storedocs[i]['name'],
+                                                      style: const TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 18,
+                                                        color: Color.fromARGB(
+                                                            255, 255, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
@@ -149,18 +151,20 @@ class _TutorProState extends State<TutorPro> {
                                                       fontFamily: 'Raleway',
                                                     ),
                                                   ),
-                                                  Text(
-                                                    storedocs[i]
-                                                        ['target student'],
-                                                    style: const TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      fontSize: 16,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: Text(
+                                                      storedocs[i]
+                                                          ['target student'],
+                                                      style: const TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 16,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
@@ -182,18 +186,20 @@ class _TutorProState extends State<TutorPro> {
                                                       ),
                                                     ),
                                                   ),
-                                                  Text(
-                                                    storedocs[i]
-                                                        ['teaching subject'],
-                                                    style: const TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      fontSize: 16,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: Text(
+                                                      storedocs[i]
+                                                          ['teaching subject'],
+                                                      style: const TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 16,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
@@ -213,57 +219,21 @@ class _TutorProState extends State<TutorPro> {
                                                       fontFamily: 'Raleway',
                                                     ),
                                                   ),
-                                                  Text(
-                                                    storedocs[i]
-                                                        ['asking salary'],
-                                                    style: const TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      fontSize: 16,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: Text(
+                                                      storedocs[i]
+                                                          ['asking salary'],
+                                                      style: const TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 16,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Row(
-                                                children: [
-                                                  const Text(
-                                                    'রিভিউ:  ',
-                                                    style: TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      fontSize: 16,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontFamily: 'Raleway',
-                                                    ),
-                                                  ),
-                                                  const Text(
-                                                    '21  ',
-                                                    style: const TextStyle(
-                                                      decoration:
-                                                          TextDecoration.none,
-                                                      fontSize: 16,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontFamily: 'Raleway',
-                                                    ),
-                                                  ),
-                                                  Icon(
-                                                    Icons.star,
-                                                    color: Color.fromARGB(
-                                                        255, 253, 0, 0),
-                                                    size: 17.0,
-                                                    semanticLabel:
-                                                        'Text to announce in accessibility modes',
                                                   ),
                                                 ],
                                               ),

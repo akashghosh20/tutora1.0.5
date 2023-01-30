@@ -41,7 +41,7 @@ class TutorName extends StatelessWidget {
                       Container(
                         color: const Color.fromARGB(255, 255, 240, 240),
                         alignment: Alignment.center,
-                        height: 110,
+                        height: 150,
                         margin: const EdgeInsets.all(10.0),
                         width: double.infinity,
                         child: Row(
@@ -59,7 +59,7 @@ class TutorName extends StatelessWidget {
                               Expanded(
                                 child: Container(
                                     margin: const EdgeInsets.all(10.0),
-                                    height: 110,
+                                    height: 300,
                                     decoration: const BoxDecoration(
                                         color:
                                             Color.fromARGB(255, 255, 240, 240)),
@@ -79,15 +79,18 @@ class TutorName extends StatelessWidget {
                                                     'Hind Siliguri Regular',
                                               ),
                                             ),
-                                            Text(
-                                              "${data['name']}",
-                                              style: const TextStyle(
-                                                decoration: TextDecoration.none,
-                                                fontSize: 17,
-                                                color: Color.fromARGB(
-                                                    255, 0, 0, 0),
-                                                fontWeight: FontWeight.bold,
-                                                fontFamily: 'Raleway',
+                                            Flexible(
+                                              child: Text(
+                                                "${data['name']}",
+                                                style: const TextStyle(
+                                                  decoration:
+                                                      TextDecoration.none,
+                                                  fontSize: 17,
+                                                  color: Color.fromARGB(
+                                                      255, 0, 0, 0),
+                                                  fontWeight: FontWeight.bold,
+                                                  fontFamily: 'Raleway',
+                                                ),
                                               ),
                                             ),
                                           ],
@@ -105,15 +108,18 @@ class TutorName extends StatelessWidget {
                                                 fontFamily: 'Raleway',
                                               ),
                                             ),
-                                            Text(
-                                              "${data['target student']}",
-                                              style: const TextStyle(
-                                                decoration: TextDecoration.none,
-                                                fontSize: 17,
-                                                color: Color.fromARGB(
-                                                    255, 0, 0, 0),
-                                                fontWeight: FontWeight.normal,
-                                                fontFamily: 'Raleway',
+                                            Flexible(
+                                              child: Text(
+                                                "${data['target student']}",
+                                                style: const TextStyle(
+                                                  decoration:
+                                                      TextDecoration.none,
+                                                  fontSize: 17,
+                                                  color: Color.fromARGB(
+                                                      255, 0, 0, 0),
+                                                  fontWeight: FontWeight.normal,
+                                                  fontFamily: 'Raleway',
+                                                ),
                                               ),
                                             ),
                                           ],
@@ -131,50 +137,19 @@ class TutorName extends StatelessWidget {
                                                 fontFamily: 'Raleway',
                                               ),
                                             ),
-                                            Text(
-                                              "${data['teaching subject']}",
-                                              style: const TextStyle(
-                                                decoration: TextDecoration.none,
-                                                fontSize: 17,
-                                                color: Color.fromARGB(
-                                                    255, 0, 0, 0),
-                                                fontWeight: FontWeight.normal,
-                                                fontFamily: 'Raleway',
+                                            Flexible(
+                                              child: Text(
+                                                "${data['teaching subject']}",
+                                                style: const TextStyle(
+                                                  decoration:
+                                                      TextDecoration.none,
+                                                  fontSize: 17,
+                                                  color: Color.fromARGB(
+                                                      255, 0, 0, 0),
+                                                  fontWeight: FontWeight.normal,
+                                                  fontFamily: 'Raleway',
+                                                ),
                                               ),
-                                            ),
-                                          ],
-                                        ),
-                                        Row(
-                                          children: [
-                                            const Text(
-                                              'Reviews:  ',
-                                              style: TextStyle(
-                                                decoration: TextDecoration.none,
-                                                fontSize: 17,
-                                                color: Color.fromARGB(
-                                                    255, 0, 0, 0),
-                                                fontWeight: FontWeight.bold,
-                                                fontFamily: 'Raleway',
-                                              ),
-                                            ),
-                                            const Text(
-                                              '21  ',
-                                              style: TextStyle(
-                                                decoration: TextDecoration.none,
-                                                fontSize: 17,
-                                                color: Color.fromARGB(
-                                                    255, 0, 0, 0),
-                                                fontWeight: FontWeight.normal,
-                                                fontFamily: 'Raleway',
-                                              ),
-                                            ),
-                                            Icon(
-                                              Icons.star,
-                                              color: Color.fromARGB(
-                                                  255, 253, 0, 0),
-                                              size: 17.0,
-                                              semanticLabel:
-                                                  'Text to announce in accessibility modes',
                                             ),
                                           ],
                                         ),
@@ -268,14 +243,16 @@ class TutorName extends StatelessWidget {
                                     fontFamily: 'Raleway',
                                   ),
                                 ),
-                                Text(
-                                  "${data['study subject']}",
-                                  style: const TextStyle(
-                                    decoration: TextDecoration.none,
-                                    fontSize: 17,
-                                    color: Color.fromARGB(255, 0, 0, 0),
-                                    fontWeight: FontWeight.normal,
-                                    fontFamily: 'Raleway',
+                                Flexible(
+                                  child: Text(
+                                    "${data['study subject']}",
+                                    style: const TextStyle(
+                                      decoration: TextDecoration.none,
+                                      fontSize: 17,
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      fontWeight: FontWeight.normal,
+                                      fontFamily: 'Raleway',
+                                    ),
                                   ),
                                 ),
                               ],
@@ -390,28 +367,32 @@ class TutorName extends StatelessWidget {
                                       fontFamily: 'Raleway',
                                     ),
                                   ),
-                                  Text(
-                                    "${data['tpressentadress']}",
-                                    style: const TextStyle(
-                                      decoration: TextDecoration.none,
-                                      fontSize: 17,
-                                      color: Color.fromARGB(255, 0, 0, 0),
-                                      fontWeight: FontWeight.normal,
-                                      fontFamily: 'Raleway',
+                                  Flexible(
+                                    child: Text(
+                                      "${data['tpressentadress']}",
+                                      style: const TextStyle(
+                                        decoration: TextDecoration.none,
+                                        fontSize: 17,
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                        fontWeight: FontWeight.normal,
+                                        fontFamily: 'Raleway',
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
                               Row(
                                 children: [
-                                  const Text(
-                                    'Permanent Address :  ',
-                                    style: TextStyle(
-                                      decoration: TextDecoration.none,
-                                      fontSize: 17,
-                                      color: Color.fromARGB(255, 0, 0, 0),
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'Raleway',
+                                  Flexible(
+                                    child: const Text(
+                                      'Permanent Address :  ',
+                                      style: TextStyle(
+                                        decoration: TextDecoration.none,
+                                        fontSize: 17,
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Raleway',
+                                      ),
                                     ),
                                   ),
                                   Text(
@@ -438,14 +419,16 @@ class TutorName extends StatelessWidget {
                                       fontFamily: 'Raleway',
                                     ),
                                   ),
-                                  Text(
-                                    "${data['experience']}",
-                                    style: const TextStyle(
-                                      decoration: TextDecoration.none,
-                                      fontSize: 17,
-                                      color: Color.fromARGB(255, 0, 0, 0),
-                                      fontWeight: FontWeight.normal,
-                                      fontFamily: 'Raleway',
+                                  Flexible(
+                                    child: Text(
+                                      "${data['experience']}",
+                                      style: const TextStyle(
+                                        decoration: TextDecoration.none,
+                                        fontSize: 17,
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                        fontWeight: FontWeight.normal,
+                                        fontFamily: 'Raleway',
+                                      ),
                                     ),
                                   ),
                                 ],

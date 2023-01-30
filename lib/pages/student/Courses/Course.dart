@@ -1,3 +1,4 @@
+import 'package:Tutora/pages/ComingSoon.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:Tutora/pages/CircularProgress.dart';
@@ -180,9 +181,7 @@ class _CourseState extends State<Course> {
                                                       MaterialPageRoute(
                                                         builder: (context) =>
                                                             // UpdateStudentPage(
-                                                            TutorName(
-                                                                id: storedocs[i]
-                                                                    ['id']),
+                                                            ComingSoon(),
                                                       ),
                                                     );
                                                   },
