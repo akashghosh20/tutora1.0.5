@@ -17,7 +17,7 @@ class English1Document {
     English1Document(
       title: "Vector",
       docUrl:
-          "https://firebasestorage.googleapis.com/v0/b/workplease-19076.appspot.com/o/pdfs%2F1.pdf?alt=media&token=a0b40048-d79b-4366-bb9a-f2a2f1987976",
+          "https://firebasestorage.googleapis.com/v0/b/workplease-19076.appspot.com/o/pdfs%2Fclass11%2FBiology%201st%20Paper%2Fbio%201.pdf?alt=media&token=a6284eb8-f6cb-478e-a73d-e065eafe60df",
       docDate: "2-2-2-22",
     ),
     English1Document(
@@ -42,6 +42,11 @@ class English1Document {
       title: "Vector",
       docUrl:
           "https://firebasestorage.googleapis.com/v0/b/workplease-19076.appspot.com/o/pdfs%2F1.pdf?alt=media&token=a0b40048-d79b-4366-bb9a-f2a2f1987976",
+      docDate: "2-2-2-22",
+    ),
+    English1Document(
+      title: "Vector",
+      docUrl: "",
       docDate: "2-2-2-22",
     ),
   ];

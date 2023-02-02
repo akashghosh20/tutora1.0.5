@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import 'package:Tutora/pages/student/PDF/Ssc/Agriculture/AgricultureView.dart';
-import 'package:Tutora/pages/student/PDF/Ssc/Bangla2nd/Bangla2View.dart';
+import 'package:Tutora/pages/student/PDF/Ssc/Biology/AgricultureView.dart';
+import 'package:Tutora/pages/student/PDF/Ssc/Math/Bangla2View.dart';
 import 'package:Tutora/pages/student/PDF/Ssc/English1st/English1View.dart';
 import 'package:Tutora/pages/student/PDF/Ssc/English2nd/English2View.dart';
 import 'package:Tutora/pages/student/PDF/Ssc/Hindu/HinduView.dart';
 import 'package:Tutora/pages/student/PDF/Ssc/ICT/IctView.dart';
 import 'package:Tutora/pages/student/PDF/Ssc/Islam/IslamView.dart';
-import 'package:Tutora/pages/student/PDF/Ssc/Science/ScienceView.dart';
+import 'package:Tutora/pages/student/PDF/Ssc/Chemistry/ScienceView.dart';
 
 class SscSub extends StatefulWidget {
   const SscSub({Key? key}) : super(key: key);
@@ -47,7 +47,7 @@ class _SscSub extends State<SscSub> {
                             height: 10,
                           ),
                           Text(
-                            "Bangla 1st Paper",
+                            "Biology",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -63,7 +63,7 @@ class _SscSub extends State<SscSub> {
                                 style: TextButton.styleFrom(
                                     fixedSize: const Size(150, 50)),
                                 onPressed: () {
-                                  // Get.to();
+                                  Get.to(AgricultureView());
                                 },
                                 child: Text(
                                   "Open",
@@ -94,7 +94,7 @@ class _SscSub extends State<SscSub> {
                             height: 10,
                           ),
                           Text(
-                            "Bangla 2nd Paper",
+                            "Higher Math",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -282,7 +282,7 @@ class _SscSub extends State<SscSub> {
                             height: 10,
                           ),
                           Text(
-                            "Science",
+                            "Chemistry",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),

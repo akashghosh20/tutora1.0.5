@@ -1,26 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/ICT/IctDocument.dart';
+import 'package:Tutora/pages/student/PDF/Ssc/Biology/AgricultureDocument.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-class IctReader extends StatefulWidget {
-  IctReader(this.doc, {Key? key}) : super(key: key);
-  IctDocument doc;
+class AgricultureReader extends StatefulWidget {
+  AgricultureReader(this.doc, {Key? key}) : super(key: key);
+  AgricultureDocument doc;
 
   @override
-  State<IctReader> createState() => _IctReaderState();
+  State<AgricultureReader> createState() => _AgricultureReaderState();
 }
 
-class _IctReaderState extends State<IctReader> {
+class _AgricultureReaderState extends State<AgricultureReader> {
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.doc.title!),
-        centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 255, 0, 0),
       ),
       body: SfPdfViewer.network(
         widget.doc.docUrl!,

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/ICT/IctDocument.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Chemistry2nd/English2Document.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-class IctReader extends StatefulWidget {
-  IctReader(this.doc, {Key? key}) : super(key: key);
-  IctDocument doc;
+class English2Reader extends StatefulWidget {
+  English2Reader(this.doc, {Key? key}) : super(key: key);
+  English2Document doc;
 
   @override
-  State<IctReader> createState() => _IctReaderState();
+  State<English2Reader> createState() => _English2ReaderState();
 }
 
-class _IctReaderState extends State<IctReader> {
+class _English2ReaderState extends State<English2Reader> {
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
   @override
   Widget build(BuildContext context) {

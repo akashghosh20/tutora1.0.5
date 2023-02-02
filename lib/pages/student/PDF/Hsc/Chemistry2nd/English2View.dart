@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/ICT/IctDocument.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/ICT/IctReader.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Chemistry2nd/English2Document.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Chemistry2nd/English2Reader.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 /// Represents Homepage for Navigation
-class IctView extends StatefulWidget {
+class English2View extends StatefulWidget {
   @override
-  _IctView createState() => _IctView();
+  _English2View createState() => _English2View();
 }
 
-class _IctView extends State<IctView> {
+class _English2View extends State<English2View> {
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 
   @override
@@ -22,9 +22,7 @@ class _IctView extends State<IctView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('আইসিটি এর অধ্যায়সমূহ'),
-          centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 255, 0, 0),
+          title: const Text('Syncfusion Flutter PDF Viewer'),
           actions: <Widget>[
             IconButton(
               icon: const Icon(
@@ -44,10 +42,10 @@ class _IctView extends State<IctView> {
             children: [
               Text("Recent Documents"),
               Column(
-                children: IctDocument.doc_list
+                children: English2Document.doc_list
                     .map((doc) => ListTile(
                           onTap: () {
-                            Get.to(IctReader(doc));
+                            Get.to(English2Reader(doc));
                           },
                           leading: Icon(Icons.picture_as_pdf),
                           iconColor: Color.fromARGB(255, 255, 0, 0),

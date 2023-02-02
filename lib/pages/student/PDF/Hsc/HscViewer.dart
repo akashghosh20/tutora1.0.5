@@ -22,7 +22,7 @@ class _HscViewer extends State<HscViewer> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Syncfusion Flutter PDF Viewer'),
+          title: const Text('সকল বিষয়সমূহ'),
           actions: <Widget>[
             IconButton(
               icon: const Icon(

@@ -1,15 +1,15 @@
+import 'package:Tutora/pages/ComingSoon.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Biology2nd/AgricultureView.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Biology1st/Bangla2View.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Chemistry1st/ScienceView.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:Tutora/pages/student/PDF/Class8/Hindu/HinduView.dart';
-import 'package:Tutora/pages/student/PDF/Class8/Islam/IslamView.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/Agriculture/AgricultureView.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/English1st/English1View.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/English2nd/English2View.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Math2nd/English1View.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Chemistry2nd/English2View.dart';
 import 'package:Tutora/pages/student/PDF/Hsc/ICT/IctView.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/Math/MathView.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/Science/ScienceView.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Math1st/MathView.dart';
 
 class HSCSUb extends StatefulWidget {
   const HSCSUb({Key? key}) : super(key: key);
@@ -24,7 +24,8 @@ class _HSCSUb extends State<HSCSUb> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 255, 0, 0),
-        title: Text("Choose Your Subject"),
+        title: Text("তোমার বিষয় নির্বাচন কর"),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -46,7 +47,7 @@ class _HSCSUb extends State<HSCSUb> {
                             height: 10,
                           ),
                           Text(
-                            "Bangla 1st Paper",
+                            "উদ্ভিদবিজ্ঞান",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -62,7 +63,7 @@ class _HSCSUb extends State<HSCSUb> {
                                 style: TextButton.styleFrom(
                                     fixedSize: const Size(150, 50)),
                                 onPressed: () {
-                                  // Get.to(IctView());
+                                  Get.to(Bangla2View());
                                 },
                                 child: Text(
                                   "Open",
@@ -93,7 +94,7 @@ class _HSCSUb extends State<HSCSUb> {
                             height: 10,
                           ),
                           Text(
-                            "Bangla 2nd Paper",
+                            "প্রাণিবিজ্ঞান",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -109,7 +110,7 @@ class _HSCSUb extends State<HSCSUb> {
                                 style: TextButton.styleFrom(
                                     fixedSize: const Size(150, 50)),
                                 onPressed: () {
-                                  // Get.to(Bangla2View());
+                                  Get.to(AgricultureView());
                                 },
                                 child: Text(
                                   "Open",
@@ -140,7 +141,7 @@ class _HSCSUb extends State<HSCSUb> {
                             height: 10,
                           ),
                           Text(
-                            "English 1st Paper",
+                            "উচ্চতর গণিত ২য় পত্র",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -187,7 +188,7 @@ class _HSCSUb extends State<HSCSUb> {
                             height: 10,
                           ),
                           Text(
-                            "English 2nd Paper",
+                            "রসায়ন ১ম পত্র",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -203,7 +204,7 @@ class _HSCSUb extends State<HSCSUb> {
                                 style: TextButton.styleFrom(
                                     fixedSize: const Size(150, 50)),
                                 onPressed: () {
-                                  Get.to(English2View());
+                                  Get.to(ScienceView());
                                 },
                                 child: Text(
                                   "Open",
@@ -234,7 +235,7 @@ class _HSCSUb extends State<HSCSUb> {
                             height: 10,
                           ),
                           Text(
-                            "Math",
+                            "উচ্চতর গণিত ১ম পত্র",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -281,7 +282,7 @@ class _HSCSUb extends State<HSCSUb> {
                             height: 10,
                           ),
                           Text(
-                            "Science",
+                            "রসায়ন ২য় পত্র",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -297,7 +298,7 @@ class _HSCSUb extends State<HSCSUb> {
                                 style: TextButton.styleFrom(
                                     fixedSize: const Size(150, 50)),
                                 onPressed: () {
-                                  Get.to(ScienceView());
+                                  Get.to(English2View());
                                 },
                                 child: Text(
                                   "Open",
@@ -328,7 +329,7 @@ class _HSCSUb extends State<HSCSUb> {
                             height: 10,
                           ),
                           Text(
-                            "ICT",
+                            "আইসিটি",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -375,7 +376,7 @@ class _HSCSUb extends State<HSCSUb> {
                             height: 10,
                           ),
                           Text(
-                            "Agriculture",
+                            "পদার্থবিজ্ঞান ১ম পত্র",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -391,7 +392,7 @@ class _HSCSUb extends State<HSCSUb> {
                                 style: TextButton.styleFrom(
                                     fixedSize: const Size(150, 50)),
                                 onPressed: () {
-                                  Get.to(AgricultureView());
+                                  Get.to(ComingSoon());
                                 },
                                 child: Text(
                                   "Open",
@@ -422,7 +423,7 @@ class _HSCSUb extends State<HSCSUb> {
                             height: 10,
                           ),
                           Text(
-                            "Islam",
+                            "পদার্থবিজ্ঞান ২য় পত্র",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -438,7 +439,7 @@ class _HSCSUb extends State<HSCSUb> {
                                 style: TextButton.styleFrom(
                                     fixedSize: const Size(150, 50)),
                                 onPressed: () {
-                                  Get.to(IslamView());
+                                  Get.to(ComingSoon());
                                 },
                                 child: Text(
                                   "Open",
@@ -469,7 +470,7 @@ class _HSCSUb extends State<HSCSUb> {
                             height: 10,
                           ),
                           Text(
-                            "Hindu",
+                            "বাংলা ১ম পত্র",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -485,7 +486,7 @@ class _HSCSUb extends State<HSCSUb> {
                                 style: TextButton.styleFrom(
                                     fixedSize: const Size(150, 50)),
                                 onPressed: () {
-                                  Get.to(HinduView());
+                                  Get.to(ComingSoon());
                                 },
                                 child: Text(
                                   "Open",

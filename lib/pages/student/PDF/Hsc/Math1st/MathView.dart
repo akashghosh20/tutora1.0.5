@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/ICT/IctDocument.dart';
-import 'package:Tutora/pages/student/PDF/Hsc/ICT/IctReader.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Math1st/MathDocument.dart';
+import 'package:Tutora/pages/student/PDF/Hsc/Math1st/MathReader.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 /// Represents Homepage for Navigation
-class IctView extends StatefulWidget {
+class MathView extends StatefulWidget {
   @override
-  _IctView createState() => _IctView();
+  _MathView createState() => _MathView();
 }
 
-class _IctView extends State<IctView> {
+class _MathView extends State<MathView> {
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 
   @override
@@ -22,7 +22,7 @@ class _IctView extends State<IctView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('আইসিটি এর অধ্যায়সমূহ'),
+          title: const Text('উচ্চতর গণিত ১ম পত্রের অধ্যায়সমূহ'),
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 255, 0, 0),
           actions: <Widget>[
@@ -42,12 +42,11 @@ class _IctView extends State<IctView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text("Recent Documents"),
               Column(
-                children: IctDocument.doc_list
+                children: MathDocument.doc_list
                     .map((doc) => ListTile(
                           onTap: () {
-                            Get.to(IctReader(doc));
+                            Get.to(MathReader(doc));
                           },
                           leading: Icon(Icons.picture_as_pdf),
                           iconColor: Color.fromARGB(255, 255, 0, 0),

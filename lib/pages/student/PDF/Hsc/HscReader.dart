@@ -19,6 +19,8 @@ class _HscReader extends State<HscReader> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.doc.title!),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 255, 0, 0),
       ),
       body: SfPdfViewer.network(
         widget.doc.docUrl!,
