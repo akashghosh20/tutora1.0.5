@@ -40,7 +40,7 @@ class _aboutUsState extends State<aboutUs> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/proto.jpg",
+                          "assets/images/tutorsdp.png",
                           height: 200,
                           width: 200,
                         ),
@@ -129,7 +129,7 @@ class _aboutUsState extends State<aboutUs> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/akash1.jpg",
+                          "assets/images/tutorsdp.png",
                           height: 200,
                           width: 200,
                         ),
@@ -223,7 +223,7 @@ class _aboutUsState extends State<aboutUs> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/rana.jpg",
+                          "assets/images/tutorsdp.png",
                           height: 200,
                           width: 200,
                         ),
@@ -307,7 +307,7 @@ class _aboutUsState extends State<aboutUs> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/lian.jpg",
+                          "assets/images/tutorsdp.png",
                           height: 200,
                           width: 200,
                         ),
@@ -392,7 +392,7 @@ class _aboutUsState extends State<aboutUs> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/shahab.jpg",
+                          "assets/images/tutorsdp.png",
                           height: 200,
                           width: 200,
                         ),
