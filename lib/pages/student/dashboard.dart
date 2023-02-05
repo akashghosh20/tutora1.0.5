@@ -36,8 +36,8 @@ class _DashboardState extends State<Dashboard> {
           padding: const EdgeInsets.all(8.0),
           child: GridView.count(
               crossAxisCount: 3,
-              crossAxisSpacing: 5.0,
-              mainAxisSpacing: 8.0,
+              crossAxisSpacing: 8.0,
+              mainAxisSpacing: 3.0,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -55,8 +55,8 @@ class _DashboardState extends State<Dashboard> {
                         Flexible(
                           child: Image.asset(
                             "assets/images/tutor.png",
-                            width: 80,
-                            height: 80,
+                            width: 90,
+                            height: 90,
                           ),
                         ),
                         const SizedBox(
@@ -77,8 +77,8 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/britti.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                         const SizedBox(
                           height: 5,
@@ -98,8 +98,8 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/note.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                         const SizedBox(
                           height: 5,
@@ -122,8 +122,8 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/quiz.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                         const SizedBox(
                           height: 5,
@@ -144,8 +144,8 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/tutors.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                         const SizedBox(
                           height: 5,
@@ -165,8 +165,8 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/courses.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                         const SizedBox(
                           height: 5,
@@ -186,8 +186,8 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/about.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                         const SizedBox(
                           height: 5,
@@ -208,8 +208,8 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/jiggasa.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                         const SizedBox(
                           height: 5,
@@ -229,8 +229,8 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/review.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                         const SizedBox(
                           height: 5,
@@ -251,8 +251,8 @@ class _DashboardState extends State<Dashboard> {
                         Flexible(
                           child: Image.asset(
                             "assets/images/reward.png",
-                            width: 80,
-                            height: 80,
+                            width: 90,
+                            height: 90,
                           ),
                         ),
                         const SizedBox(
@@ -277,8 +277,8 @@ class _DashboardState extends State<Dashboard> {
                         Flexible(
                           child: Image.asset(
                             "assets/images/coaching.png",
-                            width: 80,
-                            height: 80,
+                            width: 90,
+                            height: 90,
                           ),
                         ),
                         const SizedBox(
@@ -299,8 +299,8 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/jogajug.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                         const SizedBox(
                           height: 5,

@@ -1,3 +1,4 @@
+import 'package:Tutora/pages/student/ContactUs/contactUs.dart';
 import 'package:Tutora/pages/tutor/HowItWork/howItWork1.dart';
 import 'package:Tutora/pages/tutor/extraerning/extraearningOne.dart';
 import 'package:Tutora/pages/tutor/query/query.dart';
@@ -42,8 +43,8 @@ class _DashboardState extends State<Dashboard> {
                       Flexible(
                         child: Image.asset(
                           "assets/images/timetable.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                       ),
                       SizedBox(
@@ -68,8 +69,8 @@ class _DashboardState extends State<Dashboard> {
                       Flexible(
                         child: Image.asset(
                           "assets/images/tutionSomuh.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                       ),
                       const SizedBox(
@@ -90,8 +91,8 @@ class _DashboardState extends State<Dashboard> {
                     children: [
                       Image.asset(
                         "assets/images/extraearning.png",
-                        width: 80,
-                        height: 80,
+                        width: 90,
+                        height: 90,
                       ),
                       const SizedBox(
                         height: 5,
@@ -115,8 +116,8 @@ class _DashboardState extends State<Dashboard> {
                       Flexible(
                         child: Image.asset(
                           "assets/images/juggotaJachai.png",
-                          width: 80,
-                          height: 80,
+                          width: 90,
+                          height: 90,
                         ),
                       ),
                       const SizedBox(
@@ -137,8 +138,8 @@ class _DashboardState extends State<Dashboard> {
                     children: [
                       Image.asset(
                         "assets/images/kajerpoddhoti.png",
-                        width: 80,
-                        height: 80,
+                        width: 90,
+                        height: 90,
                       ),
                       const SizedBox(
                         height: 5,
@@ -158,8 +159,8 @@ class _DashboardState extends State<Dashboard> {
                     children: [
                       Image.asset(
                         "assets/images/about.png",
-                        width: 80,
-                        height: 80,
+                        width: 90,
+                        height: 90,
                       ),
                       const SizedBox(
                         height: 5,
@@ -179,8 +180,8 @@ class _DashboardState extends State<Dashboard> {
                     children: [
                       Image.asset(
                         "assets/images/jiggasa.png",
-                        width: 80,
-                        height: 80,
+                        width: 90,
+                        height: 90,
                       ),
                       const SizedBox(
                         height: 5,
@@ -193,15 +194,15 @@ class _DashboardState extends State<Dashboard> {
                 padding: const EdgeInsets.all(8.0),
                 child: GestureDetector(
                   onTap: () {
-                    Get.to(const ComingSoon());
+                    Get.to(const ContactUs());
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        "assets/images/coming.png",
-                        width: 80,
-                        height: 80,
+                        "assets/images/jogajug.png",
+                        width: 90,
+                        height: 90,
                       ),
                       const SizedBox(
                         height: 5,
@@ -221,8 +222,8 @@ class _DashboardState extends State<Dashboard> {
                     children: [
                       Image.asset(
                         "assets/images/coming.png",
-                        width: 80,
-                        height: 80,
+                        width: 90,
+                        height: 90,
                       ),
                       const SizedBox(
                         height: 5,
@@ -242,8 +243,8 @@ class _DashboardState extends State<Dashboard> {
                     children: [
                       Image.asset(
                         "assets/images/coming.png",
-                        width: 80,
-                        height: 80,
+                        width: 90,
+                        height: 90,
                       ),
                       const SizedBox(
                         height: 5,
@@ -263,8 +264,8 @@ class _DashboardState extends State<Dashboard> {
                     children: [
                       Image.asset(
                         "assets/images/coming.png",
-                        width: 80,
-                        height: 80,
+                        width: 90,
+                        height: 90,
                       ),
                       const SizedBox(
                         height: 5,
@@ -284,8 +285,8 @@ class _DashboardState extends State<Dashboard> {
                     children: [
                       Image.asset(
                         "assets/images/coming.png",
-                        width: 80,
-                        height: 80,
+                        width: 90,
+                        height: 90,
                       ),
                       const SizedBox(
                         height: 5,
