@@ -39,8 +39,8 @@ class _HomePageState extends State<HomePage> {
                   style: TextButton.styleFrom(fixedSize: const Size(180, 50)),
                   onPressed: () {
                     {
-                      Get.to(const AuthPage());
-                      FirebaseAuth.instance.signOut();
+                      // Get.to(const AuthPage());
+                      // FirebaseAuth.instance.signOut();
                     }
                   },
                   child: const Text(

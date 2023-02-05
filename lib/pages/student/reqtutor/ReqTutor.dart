@@ -31,6 +31,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
   final _noOfStudentController = TextEditingController();
   final _preferableTimeController = TextEditingController();
   final _isBookedController = TextEditingController();
+  final _collegeController = TextEditingController();
 
   String? name;
   String? email;
@@ -41,19 +42,27 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
   String? clas;
   String? city;
   String? address;
+  String? college;
 
   @override
   void initState() {
     _isBookedController.text = "Pending";
-    name = UserSharedPreference().getName();
-    email = UserSharedPreference().getEmail();
-    gender = UserSharedPreference().getGender();
-    religion = UserSharedPreference().getReligion();
-    phoneNo = UserSharedPreference().getNumber();
-    age = UserSharedPreference().getAge();
-    clas = UserSharedPreference().getClassStudent();
-    city = UserSharedPreference().getCity();
-    address = UserSharedPreference().getDetailsAddress();
+    name = UserSharedPreference().getName() ?? "Complete Your Profile First";
+    email = UserSharedPreference().getEmail() ?? "Complete Your Profile First";
+    gender =
+        UserSharedPreference().getGender() ?? "Complete Your Profile First";
+    religion =
+        UserSharedPreference().getReligion() ?? "Complete Your Profile First";
+    phoneNo =
+        UserSharedPreference().getNumber() ?? "Complete Your Profile First";
+    age = UserSharedPreference().getAge() ?? "Complete Your Profile First";
+    clas = UserSharedPreference().getClassStudent() ??
+        "Complete Your Profile First";
+    city = UserSharedPreference().getCity() ?? "Complete Your Profile First";
+    address = UserSharedPreference().getDetailsAddress() ??
+        "Complete Your Profile First";
+    college = UserSharedPreference().getStudentInstitution() ??
+        "Complete Your Profile First ";
     setState(() {});
     _nameController.text = name!;
     _emailController.text = email!;
@@ -64,6 +73,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
     _cityController.text = city!;
     _detailsAddressController.text = address!;
     _religionController.text = religion!;
+    _collegeController.text = college!;
 
     super.initState();
   }
@@ -83,6 +93,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
     _cityController.dispose();
     _detailsAddressController.dispose();
     _religionController.dispose();
+    _collegeController.dispose();
 
     super.dispose();
   }
@@ -103,6 +114,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
       _noOfStudentController.text.trim(),
       _preferableTimeController.text.trim(),
       _isBookedController.text.trim(),
+      _collegeController.text.trim(),
     );
     Get.to(CongratsStudent());
   }
@@ -121,6 +133,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
       String address,
       String noOfStudent,
       String preferableTimes,
+      String college,
       String isbooked) async {
     await FirebaseFirestore.instance.collection('studentsteacherreq').add({
       'subject': subject,
@@ -136,6 +149,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
       'address': address,
       'no of student': noOfStudent,
       'preferable times': preferableTimes,
+      'college': college,
       'isbooked': isbooked,
     });
   }
@@ -198,7 +212,7 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
+                      child: TextFormField(
                         controller: _daysController,
                         obscureText: true,
                         decoration: const InputDecoration(
@@ -492,6 +506,27 @@ class _RequestTutorInStudentState extends State<RequestTutorInStudent> {
                         decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: 'ঠিকানা',
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: TextField(
+                        controller: _collegeController,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'কলেজ',
                         ),
                       ),
                     ),

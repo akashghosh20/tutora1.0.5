@@ -1,3 +1,4 @@
+import 'package:Tutora/pages/student/ContactUs/contactUs.dart';
 import 'package:Tutora/pages/student/Review/Review.dart';
 import 'package:Tutora/pages/student/query/query.dart';
 import 'package:Tutora/pages/student/quiz/quizClass.dart';
@@ -53,18 +54,13 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Flexible(
                           child: Image.asset(
-                            "assets/images/schedule.png",
-                            width: 70,
-                            height: 70,
-                            color: const Color.fromARGB(255, 255, 0, 0),
+                            "assets/images/tutor.png",
+                            width: 80,
+                            height: 80,
                           ),
                         ),
                         const SizedBox(
                           height: 5,
-                        ),
-                        const Text(
-                          "টিউটর চাই",
-                          style: TextStyle(fontFamily: 'Hind Siliguri Regular'),
                         ),
                       ],
                     ),
@@ -80,15 +76,13 @@ class _DashboardState extends State<Dashboard> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/scholarships.png",
-                          width: 70,
-                          height: 70,
-                          color: const Color.fromARGB(255, 255, 0, 0),
+                          "assets/images/britti.png",
+                          width: 80,
+                          height: 80,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("মাসিক বৃত্তি"),
                       ],
                     ),
                   ),
@@ -103,15 +97,13 @@ class _DashboardState extends State<Dashboard> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/notes.png",
-                          width: 70,
-                          height: 70,
-                          color: const Color.fromARGB(255, 255, 0, 0),
+                          "assets/images/note.png",
+                          width: 80,
+                          height: 80,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("নোট খাতা")
                       ],
                     ),
                   ),
@@ -129,15 +121,13 @@ class _DashboardState extends State<Dashboard> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/dailytask.png",
-                          width: 70,
-                          height: 70,
-                          color: const Color.fromARGB(255, 255, 0, 0),
+                          "assets/images/quiz.png",
+                          width: 80,
+                          height: 80,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("কুইজ টেস্ট")
                       ],
                     ),
                   ),
@@ -154,14 +144,12 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/tutors.png",
-                          width: 70,
-                          height: 70,
-                          color: const Color.fromARGB(255, 255, 0, 0),
+                          width: 80,
+                          height: 80,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("টিউটরেরা")
                       ],
                     ),
                   ),
@@ -177,14 +165,12 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/courses.png",
-                          width: 70,
-                          height: 70,
-                          color: const Color.fromARGB(255, 255, 0, 0),
+                          width: 80,
+                          height: 80,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("কোর্সসমূহ")
                       ],
                     ),
                   ),
@@ -199,15 +185,13 @@ class _DashboardState extends State<Dashboard> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/aboutus.png",
-                          width: 70,
-                          height: 70,
-                          color: const Color.fromARGB(255, 255, 0, 0),
+                          "assets/images/about.png",
+                          width: 80,
+                          height: 80,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("আমাদের জানুন")
                       ],
                     ),
                   ),
@@ -223,15 +207,13 @@ class _DashboardState extends State<Dashboard> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/247.png",
-                          width: 70,
-                          height: 70,
-                          color: const Color.fromARGB(255, 255, 0, 0),
+                          "assets/images/jiggasa.png",
+                          width: 80,
+                          height: 80,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("যেকোনো জিজ্ঞাসা"),
                       ],
                     ),
                   ),
@@ -247,14 +229,12 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/review.png",
-                          width: 70,
-                          height: 70,
-                          color: const Color.fromARGB(255, 255, 0, 0),
+                          width: 80,
+                          height: 80,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("রিভিউ")
                       ],
                     ),
                   ),
@@ -270,16 +250,14 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Flexible(
                           child: Image.asset(
-                            "assets/images/rewords.png",
-                            width: 70,
-                            height: 70,
-                            color: const Color.fromARGB(255, 255, 0, 0),
+                            "assets/images/reward.png",
+                            width: 80,
+                            height: 80,
                           ),
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("পুরষ্কার"),
                       ],
                     ),
                   ),
@@ -298,16 +276,14 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Flexible(
                           child: Image.asset(
-                            "assets/images/coachings.png",
-                            width: 70,
-                            height: 70,
-                            color: const Color.fromARGB(255, 255, 0, 0),
+                            "assets/images/coaching.png",
+                            width: 80,
+                            height: 80,
                           ),
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("কোচিং"),
                       ],
                     ),
                   ),
@@ -316,21 +292,19 @@ class _DashboardState extends State<Dashboard> {
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(const ComingSoon());
+                      Get.to(const ContactUs());
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/comingsoon.png",
-                          width: 70,
-                          height: 70,
-                          color: const Color.fromARGB(255, 255, 0, 0),
+                          "assets/images/jogajug.png",
+                          width: 80,
+                          height: 80,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        const Text("আসছে")
                       ],
                     ),
                   ),

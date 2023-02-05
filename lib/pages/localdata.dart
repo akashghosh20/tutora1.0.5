@@ -17,6 +17,14 @@ class UserSharedPreference {
     return sharedPreferences!.getString("name");
   }
 
+  Future StudentCollegeName(String clgname) async {
+    return await sharedPreferences!.setString("clgname", clgname);
+  }
+
+  getCollegeName() {
+    return sharedPreferences!.getString("clgname");
+  }
+
   Future setStudentInstitution(String institution) async {
     return await sharedPreferences!.setString("institution", institution);
   }

@@ -1,8 +1,7 @@
 // ignore: file_names
+import 'package:Tutora/pages/ComingSoon.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 // import 'package:flutter/src/foundation/key.dart';
 // import 'package:flutter/src/widgets/framework.dart';
 
@@ -89,16 +88,14 @@ class _aboutUsState extends State<aboutUs> {
                           children: [
                             InkWell(
                               child: const Icon(Icons.facebook),
-                              onTap: (() => launchUrlString(
-                                  "https://www.facebook.com/profile.php?id=100033079333404")),
+                              onTap: (() => const ComingSoon()),
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             IconButton(
                                 onPressed: () {
-                                  launchUrlString(
-                                      "https://www.linkedin.com/in/azizul-alam-prottoy-364986166/");
+                                  ComingSoon();
                                 },
                                 icon: FaIcon(FontAwesomeIcons.instagram)),
                             SizedBox(
@@ -106,8 +103,7 @@ class _aboutUsState extends State<aboutUs> {
                             ),
                             IconButton(
                               onPressed: () {
-                                launchUrlString(
-                                    "https://www.instagram.com/PROTTOY_01/");
+                                ComingSoon();
                               },
                               icon: const FaIcon(FontAwesomeIcons.linkedinIn),
                             ),
@@ -183,26 +179,19 @@ class _aboutUsState extends State<aboutUs> {
                           children: [
                             InkWell(
                               child: const Icon(Icons.facebook),
-                              onTap: (() => launchUrlString(
-                                  "https://web.facebook.com/akashghosh.bd")),
+                              onTap: () {},
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             IconButton(
-                                onPressed: () {
-                                  launchUrlString(
-                                      "https://www.instagram.com/akashghosh75/");
-                                },
+                                onPressed: () {},
                                 icon: FaIcon(FontAwesomeIcons.instagram)),
                             SizedBox(
                               width: 3,
                             ),
                             IconButton(
-                              onPressed: () {
-                                launchUrlString(
-                                    "https://www.linkedin.com/in/akash-ghosh-544154177/");
-                              },
+                              onPressed: () {},
                               icon: FaIcon(FontAwesomeIcons.linkedinIn),
                             ),
                           ],
@@ -267,26 +256,19 @@ class _aboutUsState extends State<aboutUs> {
                           children: [
                             InkWell(
                               child: const Icon(Icons.facebook),
-                              onTap: (() => launchUrlString(
-                                  "https://www.facebook.com/sir4n4/")),
+                              onTap: () {},
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             IconButton(
-                                onPressed: () {
-                                  launchUrlString(
-                                      "https://www.instagram.com/sir4n4/");
-                                },
+                                onPressed: () {},
                                 icon: FaIcon(FontAwesomeIcons.instagram)),
                             SizedBox(
                               width: 3,
                             ),
                             IconButton(
-                              onPressed: () {
-                                launchUrlString(
-                                    "https://www.linkedin.com/in/sojibul-islam-rana-90b369153/");
-                              },
+                              onPressed: () {},
                               icon: FaIcon(FontAwesomeIcons.linkedinIn),
                             ),
                           ],
@@ -352,26 +334,19 @@ class _aboutUsState extends State<aboutUs> {
                           children: [
                             InkWell(
                               child: const Icon(Icons.facebook),
-                              onTap: (() => launchUrlString(
-                                  "https://web.facebook.com/akashghosh.bd")),
+                              onTap: () {},
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             IconButton(
-                                onPressed: () {
-                                  launchUrlString(
-                                      "https://www.instagram.com/akashghosh75/");
-                                },
+                                onPressed: () {},
                                 icon: FaIcon(FontAwesomeIcons.instagram)),
                             SizedBox(
                               width: 3,
                             ),
                             IconButton(
-                              onPressed: () {
-                                launchUrlString(
-                                    "https://www.linkedin.com/in/akash-ghosh-544154177/");
-                              },
+                              onPressed: () {},
                               icon: FaIcon(FontAwesomeIcons.linkedinIn),
                             ),
                           ],
@@ -426,26 +401,19 @@ class _aboutUsState extends State<aboutUs> {
                           children: [
                             InkWell(
                               child: const Icon(Icons.facebook),
-                              onTap: (() => launchUrlString(
-                                  "https://web.facebook.com/akashghosh.bd")),
+                              onTap: () {},
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             IconButton(
-                                onPressed: () {
-                                  launchUrlString(
-                                      "https://www.instagram.com/akashghosh75/");
-                                },
+                                onPressed: () {},
                                 icon: FaIcon(FontAwesomeIcons.instagram)),
                             SizedBox(
                               width: 3,
                             ),
                             IconButton(
-                              onPressed: () {
-                                launchUrlString(
-                                    "https://www.linkedin.com/in/akash-ghosh-544154177/");
-                              },
+                              onPressed: () {},
                               icon: FaIcon(FontAwesomeIcons.linkedinIn),
                             ),
                           ],

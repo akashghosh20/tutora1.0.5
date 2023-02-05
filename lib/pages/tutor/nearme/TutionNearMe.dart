@@ -56,6 +56,7 @@ class _TutionNearMeState extends State<TutionNearMe> {
                         'টিউশন সমূহ',
                         textAlign: TextAlign.center,
                         style: TextStyle(
+                          decoration: TextDecoration.none,
                           fontSize: 25,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -78,7 +79,7 @@ class _TutionNearMeState extends State<TutionNearMe> {
                             Container(
                               color: const Color.fromARGB(255, 255, 233, 233),
                               alignment: Alignment.center,
-                              height: 300,
+                              height: 350,
                               margin: const EdgeInsets.all(10.0),
                               width: double.infinity,
                               child: Row(
@@ -87,7 +88,8 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                   children: [
                                     Expanded(
                                       child: Image.asset(
-                                        "assets/images/profile.png",
+                                        "assets/images/studentnearme.png",
+                                        color: Color.fromARGB(255, 255, 0, 0),
                                         width: double.infinity,
                                         height: double.infinity,
                                       ),
@@ -96,7 +98,7 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                     Expanded(
                                       child: Container(
                                           margin: const EdgeInsets.all(10.0),
-                                          height: 250,
+                                          height: 320,
                                           decoration: const BoxDecoration(
                                               color: Color.fromARGB(
                                                   255, 255, 233, 233)),
@@ -110,6 +112,8 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                                       color: Color.fromARGB(
                                                           255, 255, 0, 0),
                                                       fontSize: 20,
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontWeight:
                                                           FontWeight.bold,
                                                       fontFamily: 'Raleway',
@@ -119,6 +123,8 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                                     storedocs[i]['class'],
                                                     style: TextStyle(
                                                       fontSize: 22,
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       color: Color.fromARGB(
                                                           255, 255, 0, 0),
                                                       fontWeight:
@@ -130,78 +136,136 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                               ),
                                               Row(
                                                 children: [
-                                                  Text(
-                                                    'বিষয়   :    ',
-                                                    style: TextStyle(
-                                                      fontSize: 17,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: Text(
+                                                      'বিষয়   :    ',
+                                                      style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 17,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
                                                   ),
-                                                  Text(
-                                                    storedocs[i]['subject'],
-                                                    style: TextStyle(
-                                                      fontSize: 17,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontFamily: 'Raleway',
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    'ঠিকানা :    ',
-                                                    style: TextStyle(
-                                                      fontSize: 17,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontFamily: 'Raleway',
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    storedocs[i]['address'],
-                                                    style: TextStyle(
-                                                      fontSize: 17,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: Text(
+                                                      storedocs[i]['subject'],
+                                                      style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 17,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
                                               ),
                                               Row(
                                                 children: [
-                                                  Text(
-                                                    'বেতন    :    ',
-                                                    style: TextStyle(
-                                                      fontSize: 17,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: Text(
+                                                      'ঠিকানা :    ',
+                                                      style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 17,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
                                                   ),
-                                                  Text(
-                                                    storedocs[i]['salary'],
-                                                    style: TextStyle(
-                                                      fontSize: 17,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0),
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontFamily: 'Raleway',
+                                                  Flexible(
+                                                    child: Text(
+                                                      storedocs[i]['address'],
+                                                      style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 17,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        fontFamily: 'Raleway',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Flexible(
+                                                    child: Text(
+                                                      'কলেজ :    ',
+                                                      style: TextStyle(
+                                                        fontSize: 17,
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontFamily: 'Raleway',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Flexible(
+                                                    child: Text(
+                                                      storedocs[i]['college'],
+                                                      style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 17,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        fontFamily: 'Raleway',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Flexible(
+                                                    child: Text(
+                                                      'বেতন    :    ',
+                                                      style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 17,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontFamily: 'Raleway',
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Flexible(
+                                                    child: Text(
+                                                      storedocs[i]['salary'],
+                                                      style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
+                                                        fontSize: 17,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0),
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        fontFamily: 'Raleway',
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
@@ -211,6 +275,8 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                                   Text(
                                                     'দিন    :   ',
                                                     style: TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 17,
                                                       color: Color.fromARGB(
                                                           255, 0, 0, 0),
@@ -222,6 +288,8 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                                   Text(
                                                     storedocs[i]['days'],
                                                     style: TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 17,
                                                       color: Color.fromARGB(
                                                           255, 0, 0, 0),
@@ -237,6 +305,8 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                                   Text(
                                                     'টিউশন  আইডি:   ',
                                                     style: TextStyle(
+                                                      decoration:
+                                                          TextDecoration.none,
                                                       fontSize: 17,
                                                       color: Color.fromARGB(
                                                           255, 0, 0, 0),
@@ -249,6 +319,8 @@ class _TutionNearMeState extends State<TutionNearMe> {
                                                     child: SelectableText(
                                                       storedocs[i]['id'],
                                                       style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration.none,
                                                         fontSize: 17,
                                                         color: Color.fromARGB(
                                                             255, 0, 0, 0),
